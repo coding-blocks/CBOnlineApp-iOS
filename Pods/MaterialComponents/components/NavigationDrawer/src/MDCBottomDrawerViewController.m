@@ -14,9 +14,11 @@
 
 #import "MDCBottomDrawerViewController.h"
 
-#import "MDCBottomDrawerTransitionController.h"
-#import "MaterialUIMetrics.h"
 #import "private/MDCBottomDrawerHeaderMask.h"
+#import "MDCBottomDrawerTransitionController.h"
+#import "MDCBottomDrawerViewControllerDelegate.h"
+#import "MaterialMath.h"
+#import "MaterialUIMetrics.h"
 
 @interface MDCBottomDrawerViewController () <MDCBottomDrawerPresentationControllerDelegate>
 
@@ -29,7 +31,16 @@
 @implementation MDCBottomDrawerViewController {
   NSMutableDictionary<NSNumber *, NSNumber *> *_topCornersRadius;
   BOOL _isMaskAppliedFirstTime;
+
+  // Used for forwarding touch events if enabled.
+  __weak UIResponder *_cachedNextResponder;
+  // Used for tracking the presentation/dismissal animations.
+  BOOL _isDrawerClosed;
+  CGFloat _lastOffset;
 }
+
+@synthesize mdc_overrideBaseElevation = _mdc_overrideBaseElevation;
+@synthesize mdc_elevationDidChangeBlock = _mdc_elevationDidChangeBlock;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nil bundle:nil];
@@ -54,6 +65,14 @@
   _maskLayer = [[MDCBottomDrawerHeaderMask alloc] initWithMaximumCornerRadius:0
                                                           minimumCornerRadius:0];
   _maximumInitialDrawerHeight = 0;
+  _drawerShadowColor = [UIColor.blackColor colorWithAlphaComponent:(CGFloat)0.2];
+  _elevation = MDCShadowElevationNavDrawer;
+  _mdc_overrideBaseElevation = -1;
+
+  _dismissOnBackgroundTap = YES;
+  _shouldForwardBackgroundTouchEvents = NO;
+  _isDrawerClosed = YES;
+  _lastOffset = NSNotFound;
 }
 
 - (void)viewWillLayoutSubviews {
@@ -65,12 +84,24 @@
   }
 }
 
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+  [super traitCollectionDidChange:previousTraitCollection];
+
+  if (self.traitCollectionDidChangeBlock) {
+    self.traitCollectionDidChangeBlock(self, previousTraitCollection);
+  }
+}
+
 - (id<UIViewControllerTransitioningDelegate>)transitioningDelegate {
   return self.transitionController;
 }
 
 - (UIModalPresentationStyle)modalPresentationStyle {
   return UIModalPresentationCustom;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+  return self.presentingViewController.supportedInterfaceOrientations;
 }
 
 - (void)setTrackingScrollView:(UIScrollView *)trackingScrollView {
@@ -176,6 +207,117 @@
   }
 }
 
+- (void)setDismissOnBackgroundTap:(BOOL)dismissOnBackgroundTap {
+  _dismissOnBackgroundTap = dismissOnBackgroundTap;
+  if ([self.presentationController isKindOfClass:[MDCBottomDrawerPresentationController class]]) {
+    MDCBottomDrawerPresentationController *bottomDrawerPresentationController =
+        (MDCBottomDrawerPresentationController *)self.presentationController;
+    bottomDrawerPresentationController.dismissOnBackgroundTap = self.dismissOnBackgroundTap;
+  }
+}
+
+- (void)setShouldForwardBackgroundTouchEvents:(BOOL)shouldForwardBackgroundTouchEvents {
+  _shouldForwardBackgroundTouchEvents = shouldForwardBackgroundTouchEvents;
+  if (shouldForwardBackgroundTouchEvents) {
+    [self setDismissOnBackgroundTap:NO];
+  }
+}
+
+- (void)setElevation:(MDCShadowElevation)elevation {
+  _elevation = elevation;
+  if ([self.presentationController isKindOfClass:[MDCBottomDrawerPresentationController class]]) {
+    MDCBottomDrawerPresentationController *bottomDrawerPresentationController =
+        (MDCBottomDrawerPresentationController *)self.presentationController;
+    BOOL elevationDidChange =
+        !MDCCGFloatEqual(bottomDrawerPresentationController.elevation, elevation);
+    if (elevationDidChange) {
+      bottomDrawerPresentationController.elevation = elevation;
+      [self.view mdc_elevationDidChange];
+    }
+  }
+}
+
+- (void)setShouldAlwaysExpandHeader:(BOOL)shouldAlwaysExpandHeader {
+  _shouldAlwaysExpandHeader = shouldAlwaysExpandHeader;
+  if ([self.presentationController isKindOfClass:[MDCBottomDrawerPresentationController class]]) {
+    MDCBottomDrawerPresentationController *bottomDrawerPresentationController =
+        (MDCBottomDrawerPresentationController *)self.presentationController;
+    bottomDrawerPresentationController.shouldAlwaysExpandHeader = shouldAlwaysExpandHeader;
+  }
+}
+
+- (void)setDelegate:(id<MDCBottomDrawerViewControllerDelegate>)delegate {
+  _delegate = delegate;
+  if ([delegate isKindOfClass:[UIResponder class]]) {
+    _cachedNextResponder = (UIResponder *)delegate;
+  } else {
+    _cachedNextResponder = nil;
+  }
+}
+
+- (UIResponder *)nextResponder {
+  // Allow the delegate to opt-in to the responder chain to handle events.
+  if (self.shouldForwardBackgroundTouchEvents && _cachedNextResponder) {
+    return _cachedNextResponder;
+  }
+
+  // Otherwise, just follow the normal path.
+  return [super nextResponder];
+}
+
+- (CGFloat)mdc_currentElevation {
+  return self.elevation;
+}
+
+- (void)setDrawerShadowColor:(UIColor *)drawerShadowColor {
+  _drawerShadowColor = drawerShadowColor;
+  if ([self.presentationController isKindOfClass:[MDCBottomDrawerPresentationController class]]) {
+    MDCBottomDrawerPresentationController *bottomDrawerPresentationController =
+        (MDCBottomDrawerPresentationController *)self.presentationController;
+    bottomDrawerPresentationController.drawerShadowColor = drawerShadowColor;
+  }
+}
+
+- (void)setShouldIncludeSafeAreaInContentHeight:(BOOL)shouldIncludeSafeAreaInContentHeight {
+  _shouldIncludeSafeAreaInContentHeight = shouldIncludeSafeAreaInContentHeight;
+  if ([self.presentationController isKindOfClass:[MDCBottomDrawerPresentationController class]]) {
+    MDCBottomDrawerPresentationController *bottomDrawerPresentationController =
+        (MDCBottomDrawerPresentationController *)self.presentationController;
+    bottomDrawerPresentationController.shouldIncludeSafeAreaInContentHeight =
+        shouldIncludeSafeAreaInContentHeight;
+  }
+}
+
+- (void)setShouldIncludeSafeAreaInInitialDrawerHeight:
+    (BOOL)shouldIncludeSafeAreaInInitialDrawerHeight {
+  _shouldIncludeSafeAreaInInitialDrawerHeight = shouldIncludeSafeAreaInInitialDrawerHeight;
+  if ([self.presentationController isKindOfClass:[MDCBottomDrawerPresentationController class]]) {
+    MDCBottomDrawerPresentationController *bottomDrawerPresentationController =
+        (MDCBottomDrawerPresentationController *)self.presentationController;
+    bottomDrawerPresentationController.shouldIncludeSafeAreaInInitialDrawerHeight =
+        shouldIncludeSafeAreaInInitialDrawerHeight;
+  }
+}
+
+- (void)setShouldUseStickyStatusBar:(BOOL)shouldUseStickyStatusBar {
+  _shouldUseStickyStatusBar = shouldUseStickyStatusBar;
+  if ([self.presentationController isKindOfClass:[MDCBottomDrawerPresentationController class]]) {
+    MDCBottomDrawerPresentationController *bottomDrawerPresentationController =
+        (MDCBottomDrawerPresentationController *)self.presentationController;
+    bottomDrawerPresentationController.shouldUseStickyStatusBar = shouldUseStickyStatusBar;
+  }
+}
+
+- (void)setShouldAdjustOnContentSizeChange:(BOOL)shouldAdjustOnContentSizeChange {
+  _shouldAdjustOnContentSizeChange = shouldAdjustOnContentSizeChange;
+  if ([self.presentationController isKindOfClass:[MDCBottomDrawerPresentationController class]]) {
+    MDCBottomDrawerPresentationController *bottomDrawerPresentationController =
+        (MDCBottomDrawerPresentationController *)self.presentationController;
+    bottomDrawerPresentationController.shouldAdjustOnContentSizeChange =
+        shouldAdjustOnContentSizeChange;
+  }
+}
+
 #pragma mark UIAccessibilityAction
 
 // Adds the Z gesture for dismissal.
@@ -193,6 +335,64 @@
   }
 }
 
+- (void)bottomDrawerPresentTransitionDidEnd:
+    (MDCBottomDrawerPresentationController *)presentationController {
+  if ([self.delegate respondsToSelector:@selector(bottomDrawerControllerDidEndOpenTransition:)]) {
+    [self.delegate bottomDrawerControllerDidEndOpenTransition:self];
+  }
+}
+
+- (void)bottomDrawerDismissTransitionDidEnd:
+    (MDCBottomDrawerPresentationController *)presentationController {
+  _isDrawerClosed = YES;
+  if ([self.delegate respondsToSelector:@selector(bottomDrawerControllerDidEndCloseTransition:)]) {
+    [self.delegate bottomDrawerControllerDidEndCloseTransition:self];
+  }
+}
+
+- (void)bottomDrawerPresentTransitionWillBegin:
+            (MDCBottomDrawerPresentationController *)presentationController
+                               withCoordinator:
+                                   (id<UIViewControllerTransitionCoordinator>)transitionCoordinator
+                                 targetYOffset:(CGFloat)targetYOffset {
+  _isDrawerClosed = NO;
+  _lastOffset = targetYOffset;
+  if ([self.delegate respondsToSelector:@selector
+                     (bottomDrawerControllerWillTransitionOpen:withCoordinator:targetYOffset:)]) {
+    [self.delegate bottomDrawerControllerWillTransitionOpen:self
+                                            withCoordinator:transitionCoordinator
+                                              targetYOffset:targetYOffset];
+  }
+}
+
+- (void)bottomDrawerDismissTransitionWillBegin:
+            (MDCBottomDrawerPresentationController *)presentationController
+                               withCoordinator:
+                                   (id<UIViewControllerTransitionCoordinator>)transitionCoordinator
+                                 targetYOffset:(CGFloat)targetYOffset {
+  _lastOffset = targetYOffset;
+  if ([self.delegate respondsToSelector:@selector
+                     (bottomDrawerControllerWillTransitionClosed:withCoordinator:targetYOffset:)]) {
+    [self.delegate bottomDrawerControllerWillTransitionClosed:self
+                                              withCoordinator:transitionCoordinator
+                                                targetYOffset:targetYOffset];
+  }
+}
+
+- (void)bottomDrawerTopDidChangeYOffset:
+            (MDCBottomDrawerPresentationController *)presentationController
+                                yOffset:(CGFloat)yOffset {
+  // Only forward changes along if the drawer is actually still on screen and the offset has
+  // changed. This will avoid sending thru duplicated offset changes or changes where the
+  // real value will be calculated soon (aka set to zero for prep, then layout pass happens).
+  if (!_isDrawerClosed && _lastOffset != yOffset &&
+      [self.delegate respondsToSelector:@selector(bottomDrawerControllerDidChangeTopYOffset:
+                                                                                    yOffset:)]) {
+    [self.delegate bottomDrawerControllerDidChangeTopYOffset:self yOffset:yOffset];
+  }
+  _lastOffset = yOffset;
+}
+
 - (void)bottomDrawerWillChangeState:
             (nonnull MDCBottomDrawerPresentationController *)presentationController
                         drawerState:(MDCBottomDrawerState)drawerState {
@@ -205,7 +405,11 @@
 }
 
 - (void)contentDrawerTopInset:(CGFloat)transitionToTop {
-  CGFloat topInset = MDCDeviceTopSafeAreaInset();
+  CGFloat topInset = MDCFixedStatusBarHeightOnPreiPhoneXDevices;
+  if (@available(iOS 11.0, *)) {
+    topInset = self.view.safeAreaInsets.top;
+  }
+
   if ([self contentReachesFullScreen]) {
     topInset -= ((CGFloat)1.0 - transitionToTop) * topInset;
   } else {
@@ -214,7 +418,11 @@
   if (!self.topHandleHidden) {
     topInset = MAX(topInset, (CGFloat)7.0);
   }
-  [self.delegate bottomDrawerControllerDidChangeTopInset:self topInset:topInset];
+
+  if ([self.delegate respondsToSelector:@selector(bottomDrawerControllerDidChangeTopInset:
+                                                                                 topInset:)]) {
+    [self.delegate bottomDrawerControllerDidChangeTopInset:self topInset:topInset];
+  }
 }
 
 - (void)setContentOffsetY:(CGFloat)contentOffsetY animated:(BOOL)animated {

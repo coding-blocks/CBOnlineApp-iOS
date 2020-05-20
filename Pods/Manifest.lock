@@ -1,25 +1,35 @@
 PODS:
-  - Alamofire (4.8.2)
-  - Japx (2.1.0):
-    - Japx/Core (= 2.1.0)
-  - Japx/Alamofire (2.1.0):
-    - Alamofire (~> 4.8)
+  - Alamofire (5.2.0)
+  - Japx (3.0.0):
+    - Japx/Core (= 3.0.0)
+  - Japx/Alamofire (3.0.0):
+    - Alamofire (~> 5.0)
     - Japx/Core
-  - Japx/Core (2.1.0)
-  - Kingfisher (5.5.0)
-  - LoadingShimmer (1.0.1)
-  - MaterialComponents/NavigationDrawer (84.3.0):
+  - Japx/Core (3.0.0)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - LoadingShimmer (1.0.3)
+  - MaterialComponents/Availability (109.3.1)
+  - MaterialComponents/Elevation (109.3.1):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/NavigationDrawer (109.3.1):
+    - MaterialComponents/Elevation
     - MaterialComponents/Palettes
     - MaterialComponents/private/Math
     - MaterialComponents/private/UIMetrics
     - MaterialComponents/ShadowLayer
-  - MaterialComponents/Palettes (84.3.0)
-  - MaterialComponents/private/Application (84.3.0)
-  - MaterialComponents/private/Math (84.3.0)
-  - MaterialComponents/private/UIMetrics (84.3.0):
+  - MaterialComponents/Palettes (109.3.1)
+  - MaterialComponents/private/Application (109.3.1)
+  - MaterialComponents/private/Color (109.3.1):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (109.3.1)
+  - MaterialComponents/private/UIMetrics (109.3.1):
     - MaterialComponents/private/Application
-  - MaterialComponents/ShadowElevations (84.3.0)
-  - MaterialComponents/ShadowLayer (84.3.0):
+  - MaterialComponents/ShadowElevations (109.3.1)
+  - MaterialComponents/ShadowLayer (109.3.1):
     - MaterialComponents/ShadowElevations
   - XLPagerTabStrip (9.0.0)
 
@@ -33,7 +43,7 @@ DEPENDENCIES:
   - XLPagerTabStrip
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Japx
     - Kingfisher
@@ -42,13 +52,13 @@ SPEC REPOS:
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Japx: 4fbfa9c85c0d89e93d011b7ef55625a3de6a445e
-  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
-  LoadingShimmer: d01381d4965d6a87f12dffbb3f80eaf7990f156c
-  MaterialComponents: 897e26e71faa95ea71c183e056443e9344682faf
+  Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
+  Japx: d1f7f3e4b94f2013538102e96cf96fd417005f76
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  LoadingShimmer: dd681218498ec9648f572b845a7299b9c62e8e30
+  MaterialComponents: 7675cd4b1c9f660b63cddeb725b2de853790402b
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
 PODFILE CHECKSUM: d4df6302f3aa968b8b9c12a77bed2eb54893a720
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.9.1
