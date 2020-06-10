@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CACB6F2491440D0013E3AA /* onboardingScreen .swift */; };
+		57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */; };
+		57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */; };
 		82AEA0054B870D344E318F47 /* Pods_CBOnlineIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC848350B72E35000EBA848 /* Pods_CBOnlineIos.framework */; };
 		E5123ABA22857462005722AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123AB922857462005722AC /* AppDelegate.swift */; };
 		E5123ABC22857462005722AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123ABB22857462005722AC /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		29A67E85AF305C97A6C0CACB /* Pods-CBOnlineIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBOnlineIos.debug.xcconfig"; path = "Target Support Files/Pods-CBOnlineIos/Pods-CBOnlineIos.debug.xcconfig"; sourceTree = "<group>"; };
+		57CACB6F2491440D0013E3AA /* onboardingScreen .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "onboardingScreen .swift"; sourceTree = "<group>"; };
+		57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFillGradient.swift; sourceTree = "<group>"; };
+		57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBorderGradient.swift; sourceTree = "<group>"; };
 		6EC848350B72E35000EBA848 /* Pods_CBOnlineIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CBOnlineIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		932BC159D3896363EBD793BD /* Pods-CBOnlineIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBOnlineIos.release.xcconfig"; path = "Target Support Files/Pods-CBOnlineIos/Pods-CBOnlineIos.release.xcconfig"; sourceTree = "<group>"; };
 		E5123AB622857462005722AC /* CBOnlineIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBOnlineIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +67,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		57CACB71249144640013E3AA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E5123ABB22857462005722AC /* ViewController.swift */,
+				57CACB6F2491440D0013E3AA /* onboardingScreen .swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		57CACB72249144B00013E3AA /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				E5123ABD22857462005722AC /* Main.storyboard */,
+				E5123AC222857464005722AC /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		E5123AAD22857462005722AC = {
 			isa = PBXGroup;
 			children = (
@@ -84,11 +108,10 @@
 			children = (
 				E5DBADE322A2EA60007A20B5 /* Views */,
 				E5DBADE022A2EA22007A20B5 /* Extensions */,
+				57CACB71249144640013E3AA /* Presentation */,
+				57CACB72249144B00013E3AA /* StoryBoards */,
 				E5123AB922857462005722AC /* AppDelegate.swift */,
-				E5123ABB22857462005722AC /* ViewController.swift */,
-				E5123ABD22857462005722AC /* Main.storyboard */,
 				E5123AC022857464005722AC /* Assets.xcassets */,
-				E5123AC222857464005722AC /* LaunchScreen.storyboard */,
 				E5123AC522857464005722AC /* Info.plist */,
 			);
 			path = CBOnlineIos;
@@ -106,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				E5DBADE422A2EA75007A20B5 /* CourseCard.swift */,
+				57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */,
+				57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +252,9 @@
 			files = (
 				E5123ABC22857462005722AC /* ViewController.swift in Sources */,
 				E5123ABA22857462005722AC /* AppDelegate.swift in Sources */,
+				57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */,
+				57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */,
+				57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */,
 				E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */,
 				E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */,
 			);
