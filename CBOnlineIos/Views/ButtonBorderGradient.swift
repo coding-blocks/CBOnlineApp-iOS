@@ -1,4 +1,10 @@
-
+//
+//  ButtonBorderGradient.swift
+//  CBOnlineIos
+//
+//  Created by Vaibhav Bisht on 10/06/20.
+//  Copyright © 2020 Coding Blocks. All rights reserved.
+//
 
 import UIKit
 
@@ -63,7 +69,6 @@ class ButtonBorderGradient: UIButton {
         
         backgroundView.removeFromSuperview()
         backgroundView = UIView()
-        backgroundView.isUserInteractionEnabled = false
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         insertSubview(backgroundView, at: 1)
         backgroundView.backgroundColor = foregroundColor
