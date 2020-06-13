@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JWH-iV-md2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NFY-5y-Rpy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -117,5 +117,109 @@
             </objects>
             <point key="canvasLocation" x="-249" y="125"/>
         </scene>
+        <!--Dashboard-->
+        <scene sceneID="mr2-Be-dZs">
+            <objects>
+                <viewController title="Dashboard" id="NFY-5y-Rpy" customClass="DashboardViewController" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M2e-PX-yed">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="G64-GM-eg9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Dashboard" id="5lS-K8-sBn">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="rectangle.grid.1x2.fill" catalog="system" id="dd1-Cp-3p5">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Item" image="bell" catalog="system" id="qFn-2p-hk5">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" image="cart" catalog="system" id="79p-cQ-PYH">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03o-Hq-zIa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rd-3m-WW1">
+                                        <rect key="frame" x="295" y="20" width="107" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="  Continue" image="arrowtriangle.right.circle" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziX-zm-Cbx">
+                                        <rect key="frame" x="8" y="19" width="111" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.74591380360000004" green="0.1134682372" blue="0.40768575670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <tabBar contentMode="scaleToFill" misplaced="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="xcp-B4-E9Q">
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <items>
+                                    <tabBarItem title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="jKl-b4-nyr">
+                                        <color key="badgeColor" red="0.38314688209999997" green="0.39142256980000001" blue="0.39952725169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="MyCourses" image="video" catalog="system" selectedImage="LaunchScreenLogo" id="TUw-Pz-HHF"/>
+                                    <tabBarItem title="Dashboard" image="waveform.path.ecg" catalog="system" selectedImage="LaunchScreenLogo" springLoaded="YES" id="7ET-PW-M7W">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </tabBarItem>
+                                    <tabBarItem title="Doubts" image="message" catalog="system" selectedImage="LaunchScreenLogo" id="1Ul-jg-Zft"/>
+                                    <tabBarItem title="Library" image="archivebox" catalog="system" selectedImage="LaunchScreenLogo" id="gyg-xw-27b">
+                                        <color key="badgeColor" red="0.41580051179999999" green="0.41991144419999998" blue="0.41983285549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" red="0.1083116606" green="0.11853345479999999" blue="0.1532051861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="03o-Hq-zIa" firstAttribute="trailing" secondItem="YaI-tt-N8J" secondAttribute="trailing" id="4d6-bp-MOV"/>
+                            <constraint firstItem="03o-Hq-zIa" firstAttribute="leading" secondItem="YaI-tt-N8J" secondAttribute="leading" id="68s-wJ-Fl9"/>
+                            <constraint firstItem="G64-GM-eg9" firstAttribute="trailing" secondItem="03o-Hq-zIa" secondAttribute="trailing" id="B7k-R0-wX6"/>
+                            <constraint firstItem="xcp-B4-E9Q" firstAttribute="bottom" secondItem="M2e-PX-yed" secondAttribute="bottom" id="D99-d8-xZP"/>
+                            <constraint firstItem="G64-GM-eg9" firstAttribute="top" secondItem="YaI-tt-N8J" secondAttribute="top" id="Hed-pI-dIs"/>
+                            <constraint firstItem="xcp-B4-E9Q" firstAttribute="leading" secondItem="YaI-tt-N8J" secondAttribute="leading" id="LHs-Bv-uIm"/>
+                            <constraint firstItem="G64-GM-eg9" firstAttribute="leading" secondItem="03o-Hq-zIa" secondAttribute="leading" id="Og3-0H-5m8"/>
+                            <constraint firstItem="03o-Hq-zIa" firstAttribute="top" secondItem="G64-GM-eg9" secondAttribute="bottom" id="kqc-xJ-eyW"/>
+                            <constraint firstAttribute="bottom" secondItem="03o-Hq-zIa" secondAttribute="bottom" constant="748" id="mQz-qt-FtC"/>
+                            <constraint firstItem="xcp-B4-E9Q" firstAttribute="trailing" secondItem="YaI-tt-N8J" secondAttribute="trailing" id="yGf-uj-nOf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YaI-tt-N8J"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gd8-Oa-Mf1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzt-88-eUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.91304347826093" y="124.55357142857142"/>
+        </scene>
     </scenes>
+    <color key="tintColor" red="0.95243626830000006" green="0.44801968339999998" blue="0.29030516740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="LaunchScreenLogo" width="712" height="559"/>
+        <image name="archivebox" catalog="system" width="128" height="106"/>
+        <image name="arrowtriangle.right.circle" catalog="system" width="128" height="121"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="rectangle.grid.1x2.fill" catalog="system" width="128" height="101"/>
+        <image name="video" catalog="system" width="128" height="83"/>
+        <image name="waveform.path.ecg" catalog="system" width="128" height="124"/>
+    </resources>
 </document>

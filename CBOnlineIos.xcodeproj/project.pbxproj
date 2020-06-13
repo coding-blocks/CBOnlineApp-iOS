@@ -18,6 +18,7 @@
 		E5123AC422857464005722AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5123AC222857464005722AC /* LaunchScreen.storyboard */; };
 		E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */; };
 		E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE422A2EA75007A20B5 /* CourseCard.swift */; };
+		FFD9F87F2494EFE10067B9C1 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9F87E2494EFE10067B9C1 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E5123AC522857464005722AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		E5DBADE422A2EA75007A20B5 /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
+		FFD9F87E2494EFE10067B9C1 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				E5123ABB22857462005722AC /* ViewController.swift */,
 				57CACB6F2491440D0013E3AA /* onboardingScreen .swift */,
+				FFD9F87E2494EFE10067B9C1 /* DashboardViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */,
 				E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */,
 				E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */,
+				FFD9F87F2494EFE10067B9C1 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
