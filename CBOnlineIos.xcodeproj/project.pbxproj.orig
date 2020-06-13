@@ -18,7 +18,12 @@
 		E5123AC422857464005722AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5123AC222857464005722AC /* LaunchScreen.storyboard */; };
 		E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */; };
 		E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE422A2EA75007A20B5 /* CourseCard.swift */; };
-		FFD9F87F2494EFE10067B9C1 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9F87E2494EFE10067B9C1 /* DashboardViewController.swift */; };
+<<<<<<< HEAD
+		FF29B7FD24D2EA94006858FE /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */; };
+		FF29B7FF24D2EAB6006858FE /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */; };
+		FFF21EBE24D69FD10022C8A6 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF21EBD24D69FD10022C8A6 /* NavigationBarView.swift */; };
+=======
+>>>>>>> Onboarding Screen added
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +42,12 @@
 		E5123AC522857464005722AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		E5DBADE422A2EA75007A20B5 /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
-		FFD9F87E2494EFE10067B9C1 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		FFF21EBD24D69FD10022C8A6 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> Onboarding Screen added
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +84,6 @@
 			children = (
 				E5123ABB22857462005722AC /* ViewController.swift */,
 				57CACB6F2491440D0013E3AA /* onboardingScreen .swift */,
-				FFD9F87E2494EFE10067B9C1 /* DashboardViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -134,6 +143,11 @@
 				E5DBADE422A2EA75007A20B5 /* CourseCard.swift */,
 				57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */,
 				57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */,
+<<<<<<< HEAD
+				57A36F2724B64E7E00A1DA56 /* BorderCurve.swift */,
+				FFF21EBD24D69FD10022C8A6 /* NavigationBarView.swift */,
+=======
+>>>>>>> Onboarding Screen added
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,10 +271,14 @@
 				E5123ABA22857462005722AC /* AppDelegate.swift in Sources */,
 				57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */,
 				57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */,
+<<<<<<< HEAD
+				57A36F2E24B64F8900A1DA56 /* OTPVerify.swift in Sources */,
+				FFF21EBE24D69FD10022C8A6 /* NavigationBarView.swift in Sources */,
+=======
+>>>>>>> Onboarding Screen added
 				57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */,
 				E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */,
 				E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */,
-				FFD9F87F2494EFE10067B9C1 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
