@@ -62,7 +62,7 @@
                                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <state key="normal" title="Login/Signup">
-                                                    <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -83,7 +83,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="bjY-lV-hJj" firstAttribute="centerX" secondItem="fVn-Uy-bnn" secondAttribute="centerX" id="AfK-2d-JNz"/>
                                     <constraint firstItem="bjY-lV-hJj" firstAttribute="centerY" secondItem="fVn-Uy-bnn" secondAttribute="centerY" id="juj-4k-Bkr"/>
@@ -91,7 +91,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kT6-OA-sGo" firstAttribute="centerX" secondItem="S0y-lH-6N9" secondAttribute="centerX" id="1nw-7o-aiB"/>
                             <constraint firstItem="aPg-Df-wrS" firstAttribute="trailing" secondItem="8TU-Nh-WDd" secondAttribute="trailing" id="8iS-Nz-mCg"/>
