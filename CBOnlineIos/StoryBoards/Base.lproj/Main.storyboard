@@ -184,18 +184,62 @@
         <!--Dashboard-->
         <scene sceneID="j15-Kc-0vD">
             <objects>
-                <viewController id="tQy-kc-crU" sceneMemberID="viewController">
+                <viewController id="tQy-kc-crU" customClass="DashboardViewController" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c4W-PI-7jo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0V-jf-U5q" userLabel="Nav Bar ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+                                <color key="backgroundColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="2ly-eA-nVR"/>
+                                    <constraint firstAttribute="height" constant="119" id="aAv-fW-8Ly"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmU-gn-ELD">
+                                <rect key="frame" x="0.0" y="37" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textShadowColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="-150" vertical="-3"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Dashboard" id="FZH-kh-EqF">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="MSX-1a-fS0">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Item" image="bell" catalog="system" id="qfB-sv-K6M">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" image="cart" catalog="system" id="hyG-z5-JH2">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="t0V-jf-U5q" firstAttribute="trailing" secondItem="7Ng-KY-Irz" secondAttribute="trailing" id="90g-gl-DuZ"/>
+                            <constraint firstItem="t0V-jf-U5q" firstAttribute="top" secondItem="c4W-PI-7jo" secondAttribute="top" id="Owf-KM-0YJ"/>
+                            <constraint firstItem="t0V-jf-U5q" firstAttribute="leading" secondItem="7Ng-KY-Irz" secondAttribute="leading" id="eKs-jY-It5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7Ng-KY-Irz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="waveform.path.ecg" catalog="system" id="vQF-wz-D6p"/>
+                    <connections>
+                        <outlet property="navBarView" destination="t0V-jf-U5q" id="15F-mN-sJ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZI-8O-EdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2112" y="125"/>
+            <point key="canvasLocation" x="2111.594202898551" y="124.55357142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="d6o-xc-SBc">
@@ -205,7 +249,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.27281838660000002" green="0.28162333369999998" blue="0.31610077619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.89206516739999997" green="0.48044180869999997" blue="0.3411371708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -228,8 +272,11 @@
     <color key="tintColor" red="0.95243626830000006" green="0.44801968339999998" blue="0.29030516740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="archivebox" catalog="system" width="128" height="106"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="message" catalog="system" width="128" height="113"/>
+        <image name="text.justify" catalog="system" width="128" height="100"/>
         <image name="video" catalog="system" width="128" height="83"/>
         <image name="waveform.path.ecg" catalog="system" width="128" height="124"/>
     </resources>
