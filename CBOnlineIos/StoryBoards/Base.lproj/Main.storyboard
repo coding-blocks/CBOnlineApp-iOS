@@ -124,7 +124,42 @@
                     <view key="view" contentMode="scaleToFill" id="4Rp-uR-oIp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBV-qy-kIt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="efy-0J-dT7"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textShadowColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="-150" vertical="-3"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Library" id="jBn-zY-F7a">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="Ljc-9i-wxr">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Item" image="bell" catalog="system" id="vdd-mk-Y6U">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" image="cart" catalog="system" id="STH-Dj-dkW">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dBV-qy-kIt" firstAttribute="top" secondItem="BW9-7Y-u6q" secondAttribute="top" id="9zR-YV-92r"/>
+                            <constraint firstItem="dBV-qy-kIt" firstAttribute="trailing" secondItem="BW9-7Y-u6q" secondAttribute="trailing" id="d56-g4-1hw"/>
+                            <constraint firstItem="dBV-qy-kIt" firstAttribute="leading" secondItem="BW9-7Y-u6q" secondAttribute="leading" id="dqL-qI-z8K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BW9-7Y-u6q"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Library" image="archivebox" catalog="system" id="GbS-gj-txZ"/>
@@ -140,7 +175,42 @@
                     <view key="view" contentMode="scaleToFill" id="LZh-pY-QED">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5e2-q7-3M3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5cT-9p-onb"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textShadowColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="-150" vertical="-3"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="My Courses" id="hh5-mT-rA1">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="7ot-3r-dxC">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Item" image="bell" catalog="system" id="RFL-Bc-Q02">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" image="cart" catalog="system" id="krn-ui-Z7S">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5e2-q7-3M3" firstAttribute="leading" secondItem="BCf-jE-uii" secondAttribute="leading" id="1qi-XC-YP5"/>
+                            <constraint firstItem="5e2-q7-3M3" firstAttribute="trailing" secondItem="BCf-jE-uii" secondAttribute="trailing" id="R6h-bA-KcY"/>
+                            <constraint firstItem="5e2-q7-3M3" firstAttribute="top" secondItem="BCf-jE-uii" secondAttribute="top" id="WsY-S6-jHr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BCf-jE-uii"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Courses" image="video" catalog="system" id="0jR-It-cyC"/>
@@ -152,14 +222,59 @@
         <!--Explore-->
         <scene sceneID="tLf-P3-NCL">
             <objects>
-                <viewController id="AOd-j3-8t9" sceneMemberID="viewController">
+                <viewController id="AOd-j3-8t9" customClass="ExploreViewController" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pnu-aY-Zng">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ng-QB-orU" userLabel="Nav Bar ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15Q-50-0OP">
+                                        <rect key="frame" x="0.0" y="52" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="barTintColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textShadowColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <offsetWrapper key="textShadowOffset" horizontal="-150" vertical="-3"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Welcome to Coding Blocks" id="7Az-Qc-JiO">
+                                                <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="aAE-su-sJ8">
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </barButtonItem>
+                                                <rightBarButtonItems>
+                                                    <barButtonItem title="Item" image="bell" catalog="system" id="fqA-yb-BIK">
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </barButtonItem>
+                                                    <barButtonItem title="Item" image="cart" catalog="system" id="pxl-mQ-r7L">
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </barButtonItem>
+                                                </rightBarButtonItems>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="119" id="Hbu-OB-AtN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8ng-QB-orU" firstAttribute="top" secondItem="pnu-aY-Zng" secondAttribute="top" id="AuR-gt-ZnF"/>
+                            <constraint firstItem="8ng-QB-orU" firstAttribute="trailing" secondItem="wsH-PV-w5b" secondAttribute="trailing" id="n2Y-FG-C7e"/>
+                            <constraint firstItem="8ng-QB-orU" firstAttribute="leading" secondItem="wsH-PV-w5b" secondAttribute="leading" id="wkg-lK-vH5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wsH-PV-w5b"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="0zZ-8W-pbq"/>
+                    <connections>
+                        <outlet property="navBarView" destination="8ng-QB-orU" id="Z3v-3o-MT6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAL-rQ-Gnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,7 +287,42 @@
                     <view key="view" contentMode="scaleToFill" id="o1L-iJ-1Nb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYy-0I-fQL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="g6s-fZ-gtp"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textShadowColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="-150" vertical="-3"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Doubts" id="OT0-i3-5iw">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="L13-kb-n0w">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Item" image="bell" catalog="system" id="e1f-7p-tiR">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" image="cart" catalog="system" id="CuP-EF-5Rh">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lYy-0I-fQL" firstAttribute="top" secondItem="MD4-pR-quT" secondAttribute="top" id="83s-ha-Qeq"/>
+                            <constraint firstItem="lYy-0I-fQL" firstAttribute="leading" secondItem="MD4-pR-quT" secondAttribute="leading" id="lOx-zW-8fH"/>
+                            <constraint firstItem="lYy-0I-fQL" firstAttribute="trailing" secondItem="MD4-pR-quT" secondAttribute="trailing" id="zJV-AA-uFl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MD4-pR-quT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Doubts" image="message" catalog="system" id="tSx-my-Woz"/>
@@ -191,38 +341,40 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0V-jf-U5q" userLabel="Nav Bar ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmU-gn-ELD">
+                                        <rect key="frame" x="0.0" y="52" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="barTintColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textShadowColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <offsetWrapper key="textShadowOffset" horizontal="-150" vertical="-3"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Dashboard" id="FZH-kh-EqF">
+                                                <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="MSX-1a-fS0">
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </barButtonItem>
+                                                <rightBarButtonItems>
+                                                    <barButtonItem title="Item" image="bell" catalog="system" id="qfB-sv-K6M">
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </barButtonItem>
+                                                    <barButtonItem title="Item" image="cart" catalog="system" id="hyG-z5-JH2">
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </barButtonItem>
+                                                </rightBarButtonItems>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
                                 <color key="backgroundColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="2ly-eA-nVR"/>
                                     <constraint firstAttribute="height" constant="119" id="aAv-fW-8Ly"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmU-gn-ELD">
-                                <rect key="frame" x="0.0" y="37" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="textShadowColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="-150" vertical="-3"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Dashboard" id="FZH-kh-EqF">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="MSX-1a-fS0">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </barButtonItem>
-                                        <rightBarButtonItems>
-                                            <barButtonItem title="Item" image="bell" catalog="system" id="qfB-sv-K6M">
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </barButtonItem>
-                                            <barButtonItem title="Item" image="cart" catalog="system" id="hyG-z5-JH2">
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </barButtonItem>
-                                        </rightBarButtonItems>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

@@ -2,7 +2,7 @@
 //  ExploreViewController.swift
 //  CBOnlineIos
 //
-//  Created by Pushpinder Pal Singh on 30/07/20.
+//  Created by Pushpinder Pal Singh on 19/06/20.
 //  Copyright © 2020 Coding Blocks. All rights reserved.
 //
 
@@ -10,11 +10,11 @@ import UIKit
 
 class ExploreViewController: UIViewController {
 
-    @IBOutlet weak var navigationView: UIView!
+    @IBOutlet weak var navBarView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationView.layer.cornerRadius = 20
+        navBarView.layer.cornerRadius = 20
+        // Do any additional setup after loading the view.
     }
     
 
