@@ -171,7 +171,7 @@
         <!--My Courses-->
         <scene sceneID="wtS-4A-oee">
             <objects>
-                <viewController id="1cS-sX-YtO" sceneMemberID="viewController">
+                <viewController id="1cS-sX-YtO" customClass="MyCoursesViewController" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LZh-pY-QED">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,10 +237,13 @@
                         <viewLayoutGuide key="safeArea" id="BCf-jE-uii"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Courses" image="video" catalog="system" id="0jR-It-cyC"/>
+                    <connections>
+                        <outlet property="recentlyAdded" destination="YdE-l9-qjX" id="AfE-Dt-zVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oT-Oq-AUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434.7826086956522" y="-608.03571428571422"/>
+            <point key="canvasLocation" x="1335" y="-603"/>
         </scene>
         <!--Explore-->
         <scene sceneID="tLf-P3-NCL">
@@ -379,7 +382,7 @@
                                                 </button>
                                             </barButtonItem>
                                             <barButtonItem title="Resolved" style="plain" id="sur-kT-5xr">
-                                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mrq-Kl-Gin">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mrq-Kl-Gin">
                                                     <rect key="frame" x="98" y="7" width="70" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.95294767619999998" green="0.95292979479999995" blue="0.95294183489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -389,7 +392,7 @@
                                                 </button>
                                             </barButtonItem>
                                             <barButtonItem title="All" style="plain" id="vlb-eZ-bMn">
-                                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7DW-sJ-Dym">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7DW-sJ-Dym">
                                                     <rect key="frame" x="176" y="7" width="59" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.89206516739999997" green="0.48044180869999997" blue="0.3411371708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
