@@ -20,6 +20,7 @@
 		E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE422A2EA75007A20B5 /* CourseCard.swift */; };
 		FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716A9249C61200043EB81 /* DashboardViewController.swift */; };
 		FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716AB249C66480043EB81 /* ExploreViewController.swift */; };
+		FFF716FC24A19EAF0043EB81 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E5DBADE422A2EA75007A20B5 /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
 		FFF716A9249C61200043EB81 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = CBOnlineIos/Presentation/DashboardViewController.swift; sourceTree = SOURCE_ROOT; };
 		FFF716AB249C66480043EB81 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCoursesViewController.swift; path = CBOnlineIos/Presentation/MyCoursesViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				57CACB6F2491440D0013E3AA /* onboardingScreen .swift */,
 				FFF716A9249C61200043EB81 /* DashboardViewController.swift */,
 				FFF716AB249C66480043EB81 /* ExploreViewController.swift */,
+				FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */,
 				E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */,
 				FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */,
+				FFF716FC24A19EAF0043EB81 /* MyCoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
