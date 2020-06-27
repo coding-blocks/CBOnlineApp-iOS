@@ -287,17 +287,21 @@
                                     <constraint firstAttribute="height" constant="119" id="Hbu-OB-AtN"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-jz-HJP">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-jz-HJP">
                                 <rect key="frame" x="0.0" y="163" width="414" height="754"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2WZ-xW-pMx" userLabel="Content View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2WZ-xW-pMx" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ml1-qI-nM5">
-                                                <rect key="frame" x="35" y="8" width="344" height="107"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ml1-qI-nM5">
+                                                <rect key="frame" x="35" y="8" width="344" height="78"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lex-1D-yMx">
-                                                        <rect key="frame" x="-2" y="0.0" width="346" height="107"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lex-1D-yMx">
+                                                        <rect key="frame" x="-2" y="0.0" width="346" height="78"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="headerButtonPressed:" destination="AOd-j3-8t9" eventType="touchUpInside" id="Zdm-e4-ijQ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -315,7 +319,6 @@
                                         <constraints>
                                             <constraint firstItem="ml1-qI-nM5" firstAttribute="centerX" secondItem="2WZ-xW-pMx" secondAttribute="centerX" id="1q8-Qm-Rpa"/>
                                             <constraint firstItem="ml1-qI-nM5" firstAttribute="top" secondItem="2WZ-xW-pMx" secondAttribute="topMargin" id="Nqj-be-smz"/>
-                                            <constraint firstAttribute="bottom" secondItem="ml1-qI-nM5" secondAttribute="bottom" constant="639" id="yWb-4z-Oow"/>
                                         </constraints>
                                     </view>
                                 </subviews>

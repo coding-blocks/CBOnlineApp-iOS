@@ -26,9 +26,14 @@ class ExploreViewController: UIViewController {
         navBarView.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
     }
     func setHeaderButton(){
-        headerButton.layer.cornerRadius = 10
+        gradient.cornerRadius = 10
         gradient.frame = headerButton.bounds
-        gradient.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+        gradient.colors = [UIColor.rgb(red: 4, green: 103, blue: 246).cgColor, UIColor.rgb(red: 4, green: 16, blue: 176).cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
         headerButton.layer.addSublayer(gradient)
+    }
+    @IBAction func headerButtonPressed(_ sender: UIButton) {
+        print("Whats up dog?")
     }
 }
