@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jTG-HJ-ELi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -250,7 +249,7 @@
             <objects>
                 <viewController id="AOd-j3-8t9" customClass="ExploreViewController" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pnu-aY-Zng">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="917"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ng-QB-orU" userLabel="Nav Bar ">
@@ -288,10 +287,12 @@
                                     <constraint firstAttribute="height" constant="119" id="Hbu-OB-AtN"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDv-5e-eXc" customClass="ButtonFillGradient" customModule="CBOnlineIos" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDv-5e-eXc" customClass="ButtonFillGradient" customModule="CBOnlineIos" customModuleProvider="target">
                                 <rect key="frame" x="35" y="105" width="309" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="c4i-DW-7TB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="What do you want to become?">
                                     <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -308,16 +309,43 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-jz-HJP">
+                                <rect key="frame" x="0.0" y="163" width="414" height="754"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2WZ-xW-pMx" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="width" secondItem="LgA-jz-HJP" secondAttribute="width" id="62G-3y-25a"/>
+                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="top" secondItem="LgA-jz-HJP" secondAttribute="top" id="QcS-Ir-3Sr"/>
+                                    <constraint firstAttribute="bottom" secondItem="2WZ-xW-pMx" secondAttribute="bottom" id="dd9-7l-cCX"/>
+                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="leading" secondItem="LgA-jz-HJP" secondAttribute="leading" id="kHk-y3-wKa"/>
+                                    <constraint firstAttribute="trailing" secondItem="2WZ-xW-pMx" secondAttribute="trailing" id="lum-Q4-eBp"/>
+                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="height" secondItem="LgA-jz-HJP" secondAttribute="height" priority="250" id="x6A-wu-USv"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nlN-e1-elV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="8gm-Cb-xgW"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8ng-QB-orU" firstAttribute="top" secondItem="pnu-aY-Zng" secondAttribute="top" id="AuR-gt-ZnF"/>
+                            <constraint firstItem="LgA-jz-HJP" firstAttribute="top" secondItem="ZDv-5e-eXc" secondAttribute="bottom" constant="8" id="EDu-HI-jTX"/>
+                            <constraint firstItem="wsH-PV-w5b" firstAttribute="trailing" secondItem="ZDv-5e-eXc" secondAttribute="trailing" constant="70" id="Xsj-Ey-9Bc"/>
+                            <constraint firstItem="ZDv-5e-eXc" firstAttribute="top" secondItem="8ng-QB-orU" secondAttribute="top" constant="105" id="ZJc-vc-612"/>
+                            <constraint firstItem="ZDv-5e-eXc" firstAttribute="leading" secondItem="wsH-PV-w5b" secondAttribute="leading" constant="35" id="cYV-7N-oII"/>
+                            <constraint firstItem="LgA-jz-HJP" firstAttribute="bottom" secondItem="wsH-PV-w5b" secondAttribute="bottom" id="fDG-RG-7yo"/>
+                            <constraint firstItem="LgA-jz-HJP" firstAttribute="trailing" secondItem="wsH-PV-w5b" secondAttribute="trailing" id="gf3-bO-kIx"/>
+                            <constraint firstItem="LgA-jz-HJP" firstAttribute="leading" secondItem="wsH-PV-w5b" secondAttribute="leading" id="k2H-kS-g6M"/>
                             <constraint firstItem="8ng-QB-orU" firstAttribute="trailing" secondItem="wsH-PV-w5b" secondAttribute="trailing" id="n2Y-FG-C7e"/>
                             <constraint firstItem="8ng-QB-orU" firstAttribute="leading" secondItem="wsH-PV-w5b" secondAttribute="leading" id="wkg-lK-vH5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wsH-PV-w5b"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="0zZ-8W-pbq"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="navBarView" destination="8ng-QB-orU" id="Z3v-3o-MT6"/>
                     </connections>
