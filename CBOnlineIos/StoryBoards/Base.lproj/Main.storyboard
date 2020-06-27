@@ -287,13 +287,56 @@
                                     <constraint firstAttribute="height" constant="119" id="Hbu-OB-AtN"/>
                                 </constraints>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-jz-HJP">
+                                <rect key="frame" x="0.0" y="163" width="414" height="754"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2WZ-xW-pMx" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ml1-qI-nM5">
+                                                <rect key="frame" x="35" y="8" width="344" height="107"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lex-1D-yMx">
+                                                        <rect key="frame" x="-2" y="0.0" width="346" height="107"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="lex-1D-yMx" firstAttribute="leading" secondItem="ml1-qI-nM5" secondAttribute="leading" constant="-2" id="Dmm-Vm-piw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="lex-1D-yMx" secondAttribute="bottom" id="W85-Y2-1zL"/>
+                                                    <constraint firstItem="lex-1D-yMx" firstAttribute="height" secondItem="ml1-qI-nM5" secondAttribute="height" id="aQ0-YX-KKK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lex-1D-yMx" secondAttribute="trailing" id="aUh-Xk-ZlN"/>
+                                                    <constraint firstItem="lex-1D-yMx" firstAttribute="width" secondItem="ml1-qI-nM5" secondAttribute="width" multiplier="1.00581" id="msp-TY-9MV"/>
+                                                    <constraint firstItem="lex-1D-yMx" firstAttribute="top" secondItem="ml1-qI-nM5" secondAttribute="top" id="yhv-Yc-bU2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ml1-qI-nM5" firstAttribute="centerX" secondItem="2WZ-xW-pMx" secondAttribute="centerX" id="1q8-Qm-Rpa"/>
+                                            <constraint firstItem="ml1-qI-nM5" firstAttribute="top" secondItem="2WZ-xW-pMx" secondAttribute="topMargin" id="Nqj-be-smz"/>
+                                            <constraint firstAttribute="bottom" secondItem="ml1-qI-nM5" secondAttribute="bottom" constant="639" id="yWb-4z-Oow"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="width" secondItem="LgA-jz-HJP" secondAttribute="width" id="62G-3y-25a"/>
+                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="top" secondItem="LgA-jz-HJP" secondAttribute="top" id="QcS-Ir-3Sr"/>
+                                    <constraint firstAttribute="bottom" secondItem="2WZ-xW-pMx" secondAttribute="bottom" id="dd9-7l-cCX"/>
+                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="leading" secondItem="LgA-jz-HJP" secondAttribute="leading" id="kHk-y3-wKa"/>
+                                    <constraint firstAttribute="trailing" secondItem="2WZ-xW-pMx" secondAttribute="trailing" id="lum-Q4-eBp"/>
+                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="height" secondItem="LgA-jz-HJP" secondAttribute="height" priority="250" id="x6A-wu-USv"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nlN-e1-elV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="8gm-Cb-xgW"/>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDv-5e-eXc" customClass="ButtonFillGradient" customModule="CBOnlineIos" customModuleProvider="target">
-                                <rect key="frame" x="35" y="105" width="309" height="50"/>
+                                <rect key="frame" x="86.5" y="105" width="241" height="50"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="c4i-DW-7TB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="What do you want to become?">
                                     <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -309,44 +352,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-jz-HJP">
-                                <rect key="frame" x="0.0" y="163" width="414" height="754"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2WZ-xW-pMx" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="width" secondItem="LgA-jz-HJP" secondAttribute="width" id="62G-3y-25a"/>
-                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="top" secondItem="LgA-jz-HJP" secondAttribute="top" id="QcS-Ir-3Sr"/>
-                                    <constraint firstAttribute="bottom" secondItem="2WZ-xW-pMx" secondAttribute="bottom" id="dd9-7l-cCX"/>
-                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="leading" secondItem="LgA-jz-HJP" secondAttribute="leading" id="kHk-y3-wKa"/>
-                                    <constraint firstAttribute="trailing" secondItem="2WZ-xW-pMx" secondAttribute="trailing" id="lum-Q4-eBp"/>
-                                    <constraint firstItem="2WZ-xW-pMx" firstAttribute="height" secondItem="LgA-jz-HJP" secondAttribute="height" priority="250" id="x6A-wu-USv"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="nlN-e1-elV"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="8gm-Cb-xgW"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8ng-QB-orU" firstAttribute="top" secondItem="pnu-aY-Zng" secondAttribute="top" id="AuR-gt-ZnF"/>
-                            <constraint firstItem="LgA-jz-HJP" firstAttribute="top" secondItem="ZDv-5e-eXc" secondAttribute="bottom" constant="8" id="EDu-HI-jTX"/>
-                            <constraint firstItem="wsH-PV-w5b" firstAttribute="trailing" secondItem="ZDv-5e-eXc" secondAttribute="trailing" constant="70" id="Xsj-Ey-9Bc"/>
-                            <constraint firstItem="ZDv-5e-eXc" firstAttribute="top" secondItem="8ng-QB-orU" secondAttribute="top" constant="105" id="ZJc-vc-612"/>
-                            <constraint firstItem="ZDv-5e-eXc" firstAttribute="leading" secondItem="wsH-PV-w5b" secondAttribute="leading" constant="35" id="cYV-7N-oII"/>
+                            <constraint firstItem="ZDv-5e-eXc" firstAttribute="centerX" secondItem="pnu-aY-Zng" secondAttribute="centerX" id="GCJ-lJ-LZg"/>
                             <constraint firstItem="LgA-jz-HJP" firstAttribute="bottom" secondItem="wsH-PV-w5b" secondAttribute="bottom" id="fDG-RG-7yo"/>
                             <constraint firstItem="LgA-jz-HJP" firstAttribute="trailing" secondItem="wsH-PV-w5b" secondAttribute="trailing" id="gf3-bO-kIx"/>
                             <constraint firstItem="LgA-jz-HJP" firstAttribute="leading" secondItem="wsH-PV-w5b" secondAttribute="leading" id="k2H-kS-g6M"/>
                             <constraint firstItem="8ng-QB-orU" firstAttribute="trailing" secondItem="wsH-PV-w5b" secondAttribute="trailing" id="n2Y-FG-C7e"/>
+                            <constraint firstItem="ZDv-5e-eXc" firstAttribute="top" secondItem="pnu-aY-Zng" secondAttribute="top" constant="105" id="q36-1E-MLB"/>
                             <constraint firstItem="8ng-QB-orU" firstAttribute="leading" secondItem="wsH-PV-w5b" secondAttribute="leading" id="wkg-lK-vH5"/>
+                            <constraint firstItem="LgA-jz-HJP" firstAttribute="bottom" secondItem="wsH-PV-w5b" secondAttribute="bottom" id="x3g-CO-lKP"/>
+                            <constraint firstItem="LgA-jz-HJP" firstAttribute="top" secondItem="ZDv-5e-eXc" secondAttribute="bottom" constant="8" id="zYb-Pa-iTd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wsH-PV-w5b"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="0zZ-8W-pbq"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="headerButton" destination="ml1-qI-nM5" id="sUz-xh-JLV"/>
                         <outlet property="navBarView" destination="8ng-QB-orU" id="Z3v-3o-MT6"/>
                     </connections>
                 </viewController>
@@ -466,7 +491,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZa-vt-dBI" customClass="ButtonFillGradient" customModule="CBOnlineIos" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="376" height="136"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="136"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="9WH-S0-D08"/>
@@ -555,7 +580,7 @@
                             <constraint firstItem="t0V-jf-U5q" firstAttribute="top" secondItem="c4W-PI-7jo" secondAttribute="top" id="Owf-KM-0YJ"/>
                             <constraint firstItem="H4M-Xi-i6e" firstAttribute="top" secondItem="ctD-Rz-pNh" secondAttribute="top" id="UtJ-vD-dSj"/>
                             <constraint firstItem="crN-wl-88g" firstAttribute="leading" secondItem="ctD-Rz-pNh" secondAttribute="trailing" constant="116" id="bHw-2N-J0l"/>
-                            <constraint firstItem="SZa-vt-dBI" firstAttribute="trailing" secondItem="7Ng-KY-Irz" secondAttribute="trailing" constant="-38" id="cpF-JN-iMj"/>
+                            <constraint firstItem="SZa-vt-dBI" firstAttribute="trailing" secondItem="7Ng-KY-Irz" secondAttribute="trailing" id="cpF-JN-iMj"/>
                             <constraint firstItem="t0V-jf-U5q" firstAttribute="leading" secondItem="7Ng-KY-Irz" secondAttribute="leading" id="eKs-jY-It5"/>
                             <constraint firstItem="crN-wl-88g" firstAttribute="leading" secondItem="ctD-Rz-pNh" secondAttribute="trailing" constant="116" id="esr-64-0Qe"/>
                             <constraint firstItem="SZa-vt-dBI" firstAttribute="top" secondItem="7Ng-KY-Irz" secondAttribute="top" id="i7o-8q-423"/>
