@@ -334,10 +334,12 @@
                                                     <constraint firstItem="OAj-4M-Jd2" firstAttribute="leading" secondItem="ml1-qI-nM5" secondAttribute="leading" constant="8" id="lHY-mN-nJG"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oay-zO-e0d">
-                                                <rect key="frame" x="21" y="35" width="373" height="107"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="d"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oay-zO-e0d" userLabel="HeaderButtonButton">
+                                                <rect key="frame" x="8" y="-6" width="398" height="107"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="107" id="BGJ-g5-nLc"/>
+                                                    <constraint firstAttribute="width" constant="398" id="ohk-rE-QTv"/>
+                                                </constraints>
                                                 <connections>
                                                     <action selector="headerButtonPressed:" destination="AOd-j3-8t9" eventType="touchUpInside" id="G4H-uj-OTb"/>
                                                 </connections>
@@ -346,10 +348,13 @@
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="ml1-qI-nM5" firstAttribute="centerX" secondItem="2WZ-xW-pMx" secondAttribute="centerX" id="1q8-Qm-Rpa"/>
+                                            <constraint firstItem="oay-zO-e0d" firstAttribute="leading" secondItem="2WZ-xW-pMx" secondAttribute="leading" constant="8" id="LQ1-mb-zmi"/>
                                             <constraint firstAttribute="trailing" secondItem="ml1-qI-nM5" secondAttribute="trailing" constant="35" id="LXj-cJ-JqT"/>
                                             <constraint firstItem="ml1-qI-nM5" firstAttribute="top" secondItem="2WZ-xW-pMx" secondAttribute="topMargin" id="Nqj-be-smz"/>
                                             <constraint firstAttribute="bottom" secondItem="ml1-qI-nM5" secondAttribute="bottom" constant="668" id="Rj2-mE-zDm"/>
                                             <constraint firstItem="ml1-qI-nM5" firstAttribute="leading" secondItem="2WZ-xW-pMx" secondAttribute="leading" constant="35" id="XJS-Yt-EhC"/>
+                                            <constraint firstItem="oay-zO-e0d" firstAttribute="top" secondItem="2WZ-xW-pMx" secondAttribute="top" constant="-6" id="lHR-8h-Blr"/>
+                                            <constraint firstAttribute="trailing" secondItem="oay-zO-e0d" secondAttribute="trailing" constant="8" id="uOJ-FB-6oP"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -406,9 +411,9 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="headerButton" destination="ml1-qI-nM5" id="sUz-xh-JLV"/>
-                        <outlet property="headerButtonTopic" destination="OAj-4M-Jd2" id="bw7-Zw-HSz"/>
-                        <outlet property="headerViewCoursesImage" destination="eV1-Qt-6vb" id="Njg-aR-0LO"/>
-                        <outlet property="headerViewCoursesText" destination="6OB-ic-hPu" id="Q4g-5Y-LMj"/>
+                        <outlet property="headerButtonTopic" destination="OAj-4M-Jd2" id="A2D-kA-7Eu"/>
+                        <outlet property="headerViewCoursesImage" destination="eV1-Qt-6vb" id="wla-aP-3w9"/>
+                        <outlet property="headerViewCoursesText" destination="6OB-ic-hPu" id="oRk-Ad-AFT"/>
                         <outlet property="navBarView" destination="8ng-QB-orU" id="Z3v-3o-MT6"/>
                     </connections>
                 </viewController>
