@@ -15,14 +15,13 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var headerButtonTopic: UILabel!
     @IBOutlet weak var headerViewCoursesText: UILabel!
     @IBOutlet weak var headerViewCoursesImage: UIImageView!
-    @IBOutlet weak var headerButtonButton: UIButton!
     
     let gradient = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBar()
-//        setHeaderButton()
+        setHeaderButton()
     }
     func setNavBar(){
         navBarView.layer.cornerRadius = 20
