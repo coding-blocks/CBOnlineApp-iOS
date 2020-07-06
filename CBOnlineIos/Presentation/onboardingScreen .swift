@@ -19,9 +19,12 @@ class onboardingScreen: UIViewController,UIScrollViewDelegate {
     override open var shouldAutorotate: Bool {
         return false
     }
-    //MARK: data for the slides
+    //MARK: Data for the slides
+    //Slides Titles
     var titles = ["Learn from the best in the industry","Learn on the go anytime, anywhere","Resolve all your doubts with TA's & Mentors"]
+    // Slides Description
     var descs = ["Experienced, engaging instructors take you through course material, step by step, in our high-quality video lessons.","You can learn anytime anywhere with our all new iOS app. Download and save video offline.","Get exclusive access to Live Webinars where you interact with mentors for important course topics & can solve all your doubts."]
+    //Image assets
     var imgs = ["intro1","intro2","intro3"]
     
     //get dynamic width and height of scrollview and save it
@@ -46,29 +49,30 @@ class onboardingScreen: UIViewController,UIScrollViewDelegate {
             let slide = UIView(frame: frame)
             
             //subviews
-            
+            // Slide Title implementaion
             let txt1 = UILabel.init(frame: CGRect(x:32,y:32,width:scrollWidth-64,height:60))
             txt1.textAlignment = .center
             txt1.numberOfLines = 2
             txt1.font = UIFont.boldSystemFont(ofSize: 22.0)
             txt1.text = titles[index]
+            txt1.textColor = .black
             
+            //Slide Image implementaion
             let imageView = UIImageView.init(image: UIImage.init(named: imgs[index]))
             imageView.frame = CGRect(x:0,y:txt1.frame.maxY+50,width:scrollWidth-50,height:300)
             imageView.contentMode = .scaleAspectFit
                           imageView.center = CGPoint(x:scrollWidth/2,y:txt1.frame.maxY+200 )
             imageView.contentMode = UIView.ContentMode.scaleAspectFit
             
-            
-            
-            
+            //Slide Description implementaion
             let txt2 = UILabel.init(frame: CGRect(x:32,y:imageView.frame.maxY+20,width:scrollWidth-64,height:100))
             txt2.textAlignment = .center
             txt2.numberOfLines = 5
             txt2.font = UIFont.systemFont(ofSize: 18.0, weight: .thin)
             txt2.text = descs[index]
+            txt2.textColor = .black
             
-            
+            // Adding Slides to sub View
             slide.addSubview(imageView)
             slide.addSubview(txt1)
             slide.addSubview(txt2)

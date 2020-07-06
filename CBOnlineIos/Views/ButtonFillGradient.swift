@@ -32,6 +32,7 @@ class ButtonFillGradient: UIButton {
             gradientLayer.colors = [leftGradientColor.cgColor, rightGradientColor.cgColor]
             gradientLayer.borderColor = layer.borderColor
             gradientLayer.borderWidth = layer.borderWidth
+            
             gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
             gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
             gradientLayer.cornerRadius = layer.cornerRadius
