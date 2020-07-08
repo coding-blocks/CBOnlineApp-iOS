@@ -69,6 +69,7 @@ class ButtonBorderGradient: UIButton {
         
         backgroundView.removeFromSuperview()
         backgroundView = UIView()
+        backgroundView.isUserInteractionEnabled = false
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         insertSubview(backgroundView, at: 1)
         backgroundView.backgroundColor = foregroundColor
