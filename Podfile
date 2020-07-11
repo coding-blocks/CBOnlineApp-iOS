@@ -13,6 +13,6 @@ pod 'LoadingShimmer'
 pod 'Kingfisher'
 pod 'XLPagerTabStrip'
 pod 'MaterialComponents/NavigationDrawer'
-
+pod 'FlagPhoneNumber'
 
 end

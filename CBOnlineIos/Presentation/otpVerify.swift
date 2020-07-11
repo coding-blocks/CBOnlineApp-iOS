@@ -24,8 +24,6 @@ class otpVerify: UIViewController {
     @IBOutlet weak var phoneNumberDisplay: UILabel!
     
     var vfyPhonenumber: String = ""
-    var vfyCountryCode: String = ""
-    var fullPhoneNumber = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,10 +34,13 @@ class otpVerify: UIViewController {
         otpField.backgroundColor = .clear
           otpField.attributedPlaceholder = NSAttributedString(string: "Enter One Time Password", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
         otpField.textAlignment = .center
-        fullPhoneNumber = vfyCountryCode + "-" + vfyPhonenumber
-        phoneNumberDisplay.text = "We will auto verify the OTP sent to " + fullPhoneNumber
+        phoneNumberDisplay.text = "We will auto verify the OTP sent to " + vfyPhonenumber
         otpField.textColor = UIColor.darkGray
     }
+    @IBAction func backButton(_ sender: Any) {
+        performSegue(withIdentifier: "vfyToLog", sender: self)
+    }
+    
 }
 
 

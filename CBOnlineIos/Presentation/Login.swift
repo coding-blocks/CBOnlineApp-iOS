@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FlagPhoneNumber
 // For Disabling the Keyboard when tapped outside UITextField
 extension UIViewController{
     func hideKeyborad() {
@@ -20,11 +20,11 @@ extension UIViewController{
 }
 
 
-class Login: UIViewController, UITextFieldDelegate, UIPickerViewDelegate,  UIPickerViewDataSource, UITextViewDelegate {
+class Login: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var phoneNumber: UITextField!
-    @IBOutlet weak var countryCode: UITextField!
+    @IBOutlet weak var countryCode: FPNTextField!
     
+    var listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     let picker1 = UIPickerView()
     var activeTextField = 0
     var textfield2 : [String] = []
@@ -32,26 +32,29 @@ class Login: UIViewController, UITextFieldDelegate, UIPickerViewDelegate,  UIPic
     var textField3: [String] = []
     var phoneNumberEntered = ""
     var countryCodeEntered = ""
+    var numberCheck = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataFetcher()
+        setupView()
+    }
+    
+    //MARK: View init
+    func setupView(){
+//        dataFetcher()
         self.hideKeyborad()
         updatePrivacyPolicy()
-        createPickerView()
-        createToolbar()
+//        createPickerView()
+//        createToolbar()
         
-        phoneNumber.delegate = self
-        countryCode.delegate = self
         textView.backgroundColor = .clear
         textView.textColor = .darkGray
         textView.textAlignment = .center
         countryCode.backgroundColor = .clear
         countryCode.textColor = .darkGray
-        phoneNumber.attributedPlaceholder = NSAttributedString(string: "Enter your Mobile Number", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
-        phoneNumber.textColor = UIColor.darkGray
-        phoneNumber.textAlignment = .left
         countryCode.textAlignment = .right
+        pickerview()
+        
     }
     // MARK: HyperLink
     // This is  function is for making Huperlink of Privacy Policy and Terms of Service.
@@ -73,175 +76,80 @@ class Login: UIViewController, UITextFieldDelegate, UIPickerViewDelegate,  UIPic
     private func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
         return true
     }
-    //MARK: DATA FETCHER
-    // In this data is fetched from the JSON File for the country name and Country Code
-    func dataFetcher() {
-        guard let path = Bundle.main.path(forResource: "countryData", ofType: "json") else {
-            return
-        }
-        let url = URL(fileURLWithPath: path)
-        do{
-            let data = try Data(contentsOf: url)
-            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-            guard let array = json as?[Any] else {
-                return
-            }
-            for user in array {
-                guard let userDict = user as? [String: Any] else{
-                    return
+ 
+    //MARK: Picker View
+    func pickerview(){
+        countryCode.borderStyle = .none
+        countryCode.textAlignment = .center
+        //        phoneNumberTextField.pickerView.showPhoneNumbers = false
+                countryCode.displayMode = .list // .picker by default
+
+                listController.setup(repository: countryCode.countryRepository)
+
+                listController.didSelect = { [weak self] country in
+                    self?.countryCode.setFlag(countryCode: country.code)
                 }
-                guard let countryNickName = userDict["ISOCode"] as? String else {
-                    return
-                }
-                guard let countryName = userDict["CountryEnglishName"] as? String else {
-                    return
-                }
-                guard let numberExtension = userDict["CountryCode"] as? Int else {
-                    return
-                }
-                //for converting number code from Int to String so to add (+) logo
-                let numberExtensionConversion = String(numberExtension)
-                let plusLogo = "\u{002B}"
-                let finalNumberExtension = plusLogo + numberExtensionConversion
-                
-                let textView1 = countryNickName + "("+finalNumberExtension + ")"
-                let pickerView1 = countryName + " "+finalNumberExtension
-                
-                pickerView2.append(pickerView1)
-                textfield2.append(textView1)
-                textField3.append(numberExtensionConversion)
-            }
-        }
-        catch{
-            print(error)
-        }
+
+                countryCode.delegate = self
+                countryCode.font = UIFont.systemFont(ofSize: 14)
+
+                // Custom the size/edgeInsets of the flag button
+                countryCode.flagButtonSize = CGSize(width: 35, height: 35)
+               countryCode.flagButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+
+                // Example of customizing the textField input accessory view
+                let items = [
+                    UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.save, target: self, action: nil),
+                    UIBarButtonItem(title: "Item 1", style: .plain, target: self, action: nil),
+                    UIBarButtonItem(title: "Item 2", style: .plain, target: self, action: nil)
+                ]
+               countryCode.textFieldInputAccessoryView = getCustomTextFieldInputAccessoryView(with: items)
+
+                // The placeholder is an example phone number of the selected country by default. You can add your own placeholder :
+               countryCode.hasPhoneNumberExample = false
+               countryCode.placeholder = "Phone Number"
+
+                // Set the country list
+                //        phoneNumberTextField.setCountries(including: [.ES, .IT, .BE, .LU, .DE])
+
+                // Exclude countries from the list
+                //        phoneNumberTextField.setCountries(excluding: [.AM, .BW, .BA])
+
+                // Set the flag image with a region code
+              countryCode.setFlag(countryCode: .IN)
+
+                // Set the phone number directly
+        //        phoneNumberTextField.set(phoneNumber: "+33612345678")
+
+
+                countryCode.center = view.center
     }
-    
-    // MARK: Picker View
-    // This will maitain the perations od the pickerview and displaying all its label
-    func createPickerView()
-    {
-        picker1.delegate = self
-        picker1.delegate?.pickerView?(picker1, didSelectRow: 0, inComponent: 0)
-        countryCode.inputView = picker1
-        countryCode.textColor = .darkGray
-        
-        if #available(iOS 13.0, *) {
-            picker1.backgroundColor = UIColor.systemGray4
-        } else {
-            // Fallback on earlier versions
-            picker1.backgroundColor = UIColor.lightGray
-        }
-    }
-    
-    
-    func createToolbar()
-    {
-        let toolbar = UIToolbar()
+    private func getCustomTextFieldInputAccessoryView(with items: [UIBarButtonItem]) -> UIToolbar {
+        let toolbar: UIToolbar = UIToolbar()
+
+        toolbar.barStyle = UIBarStyle.default
+        toolbar.items = items
         toolbar.sizeToFit()
-        toolbar.tintColor = UIColor.systemBlue
-        if #available(iOS 13.0, *) {
-            toolbar.backgroundColor = UIColor.systemGray4
-        } else {
-            // Fallback on earlier versions
-            toolbar.backgroundColor = UIColor.lightGray
-        }
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(closePickerView))
-        toolbar.setItems([doneButton], animated: false)
-        toolbar.isUserInteractionEnabled = true
-        countryCode.inputAccessoryView = toolbar
+
+        return toolbar
     }
-    
-    @objc func closePickerView()
-    {
-        view.endEditing(true)
+
+    @objc func dismissCountries() {
+        listController.dismiss(animated: true, completion: nil)
     }
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        //It counts total number of component inside the array
-        return pickerView2.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
-    {
-        return pickerView2[row]
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // It sets the textField on the View Controller (County Code + Country short Name )
-        countryCode.text = textfield2[row]
-        self.countryCodeEntered = textField3[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        return (300)
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 60.0
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        
-        
-        switch activeTextField{
-        case 1:
-            var label:UILabel
-            
-            if let v = view as? UILabel{
-                label = v
-            }
-            else{
-                label = UILabel()
-            }
-            
-            if self.traitCollection.userInterfaceStyle == .dark {
-                // User Interface is Dark
-                label.textColor = UIColor.white
-            } else {
-                // User Interface is Light
-                label.textColor = UIColor.black
-            }
-            label.textAlignment = .center
-            label.font = UIFont(name: "Helvetica", size: 16)
-            // It sets the text label inside the picker view (Country full name + country Code)
-            label.text = pickerView2[row]
-//            self.countryCodeEntered = textField3[row]
-            return label
-            
-        default:
-            return UILabel()
-            
-        }
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        switch textField {
-        case countryCode:
-            activeTextField = 1
-            picker1.reloadAllComponents()
-        default:
-            activeTextField = 0
-        }
-        
-    }
-    
     //MARK: Proceed Button operations
     // In this block of code we will work over prcoceed buttion operations
     @IBAction func Button(_ sender: UIButton) {
-        if phoneNumber.text?.isEmpty ?? true {
-            print("call the alert controller")
+        if numberCheck == 0 {
             alertControllerIsEmplty()
         }
         else{
-            print("FaceBook")
-            self.phoneNumberEntered =  phoneNumber.text!
             performSegue(withIdentifier: "logToVfy", sender: self)
         }
     }
+    // Alert controller function
     func alertControllerIsEmplty(){
-        let alertController = UIAlertController(title: "Warning", message: "Please enter phone number before proceeding", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Warning", message: "Please enter correct Phone Number", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK",style: .cancel, handler:nil)
         alertController.addAction(okAction)
         self.present(alertController, animated: true)
@@ -253,10 +161,47 @@ class Login: UIViewController, UITextFieldDelegate, UIPickerViewDelegate,  UIPic
         if (segue.identifier == "logToVfy") {
             let vc = segue.destination as! otpVerify
             vc.vfyPhonenumber = self.phoneNumberEntered
-            vc.vfyCountryCode = self.countryCodeEntered
         }
     }
 }
+
+//MARK: View Controller Extension
+extension Login: FPNTextFieldDelegate {
+    //Lets you know when the phone number is valid or not.
+    func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
+        textField.rightViewMode = .always
+        if isValid{
+            print(
+                isValid,
+                textField.getFormattedPhoneNumber(format: .E164) ?? "E164: nil",
+                textField.getFormattedPhoneNumber(format: .International) ?? "International: nil",
+                textField.getFormattedPhoneNumber(format: .National) ?? "National: nil",
+                textField.getFormattedPhoneNumber(format: .RFC3966) ?? "RFC3966: nil",
+                textField.getRawPhoneNumber() ?? "Raw: nil"
+            )
+            numberCheck = 1
+            phoneNumberEntered = textField.getFormattedPhoneNumber(format: .International) ?? "International: nil"
+        }
+        else {
+            numberCheck = 0
+        }
+    }
+    //lets you know when coutry is selected
+    func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
+        print(name, dialCode, code)
+    }
+
+    // push all the couties data in the list
+    func fpnDisplayCountryList() {
+        let navigationViewController = UINavigationController(rootViewController: listController)
+
+        listController.title = "Countries"
+        listController.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(dismissCountries))
+
+        self.present(navigationViewController, animated: true, completion: nil)
+    }
+}
+
 
 
 
