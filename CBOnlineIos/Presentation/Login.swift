@@ -9,16 +9,6 @@
 import UIKit
 import FlagPhoneNumber
 // For Disabling the Keyboard when tapped outside UITextField
-extension UIViewController{
-    func hideKeyborad() {
-        let tap :UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
-
 
 class Login: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     @IBOutlet weak var textView: UITextView!
@@ -41,11 +31,8 @@ class Login: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     //MARK: View init
     func setupView(){
-//        dataFetcher()
-        self.hideKeyborad()
+        self.setupHideKeyboardOnTap()
         updatePrivacyPolicy()
-//        createPickerView()
-//        createToolbar()
         
         textView.backgroundColor = .clear
         textView.textColor = .darkGray
@@ -76,64 +63,55 @@ class Login: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     private func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
         return true
     }
- 
+    
     //MARK: Picker View
     func pickerview(){
         countryCode.borderStyle = .none
         countryCode.textAlignment = .center
-        //        phoneNumberTextField.pickerView.showPhoneNumbers = false
-                countryCode.displayMode = .list // .picker by default
-
-                listController.setup(repository: countryCode.countryRepository)
-
-                listController.didSelect = { [weak self] country in
-                    self?.countryCode.setFlag(countryCode: country.code)
-                }
-
-                countryCode.delegate = self
-                countryCode.font = UIFont.systemFont(ofSize: 14)
-
-                // Custom the size/edgeInsets of the flag button
-                countryCode.flagButtonSize = CGSize(width: 35, height: 35)
-               countryCode.flagButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-
-                // Example of customizing the textField input accessory view
-                let items = [
-                    UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.save, target: self, action: nil),
-                    UIBarButtonItem(title: "Item 1", style: .plain, target: self, action: nil),
-                    UIBarButtonItem(title: "Item 2", style: .plain, target: self, action: nil)
-                ]
-               countryCode.textFieldInputAccessoryView = getCustomTextFieldInputAccessoryView(with: items)
-
-                // The placeholder is an example phone number of the selected country by default. You can add your own placeholder :
-               countryCode.hasPhoneNumberExample = false
-               countryCode.placeholder = "Phone Number"
-
-                // Set the country list
-                //        phoneNumberTextField.setCountries(including: [.ES, .IT, .BE, .LU, .DE])
-
-                // Exclude countries from the list
-                //        phoneNumberTextField.setCountries(excluding: [.AM, .BW, .BA])
-
-                // Set the flag image with a region code
-              countryCode.setFlag(countryCode: .IN)
-
-                // Set the phone number directly
-        //        phoneNumberTextField.set(phoneNumber: "+33612345678")
-
-
-                countryCode.center = view.center
+        countryCode.displayMode = .list // .picker by default
+        
+        listController.setup(repository: countryCode.countryRepository)
+        
+        listController.didSelect = { [weak self] country in
+            self?.countryCode.setFlag(countryCode: country.code)
+        }
+        
+        countryCode.delegate = self
+        countryCode.font = UIFont.systemFont(ofSize: 14)
+        
+        // Custom the size/edgeInsets of the flag button
+        countryCode.flagButtonSize = CGSize(width: 35, height: 35)
+        countryCode.flagButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        countryCode.textColor = UIColor.darkGray
+        
+        // Example of customizing the textField input accessory view
+        let items = [
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.save, target: self, action: nil),
+            UIBarButtonItem(title: "Item 1", style: .plain, target: self, action: nil),
+            UIBarButtonItem(title: "Item 2", style: .plain, target: self, action: nil)
+        ]
+        countryCode.textFieldInputAccessoryView = getCustomTextFieldInputAccessoryView(with: items)
+        
+        // The placeholder is an example phone number of the selected country by default. You can add your own placeholder :
+        countryCode.hasPhoneNumberExample = false
+        countryCode.attributedPlaceholder = NSAttributedString(string:"Phone Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        
+        // Set the flag image with a region code
+        countryCode.setFlag(countryCode: .IN)
+        
+        
+        countryCode.center = view.center
     }
     private func getCustomTextFieldInputAccessoryView(with items: [UIBarButtonItem]) -> UIToolbar {
         let toolbar: UIToolbar = UIToolbar()
-
+        
         toolbar.barStyle = UIBarStyle.default
         toolbar.items = items
         toolbar.sizeToFit()
-
+        
         return toolbar
     }
-
+    
     @objc func dismissCountries() {
         listController.dismiss(animated: true, completion: nil)
     }
@@ -159,7 +137,7 @@ class Login: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     // In this we are passing phone number and country Code from one ViewControler to another
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "logToVfy") {
-            let vc = segue.destination as! otpVerify
+            let vc = segue.destination as! OTPVerify
             vc.vfyPhonenumber = self.phoneNumberEntered
         }
     }
@@ -190,14 +168,14 @@ extension Login: FPNTextFieldDelegate {
     func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
         print(name, dialCode, code)
     }
-
+    
     // push all the couties data in the list
     func fpnDisplayCountryList() {
         let navigationViewController = UINavigationController(rootViewController: listController)
-
+        
         listController.title = "Countries"
         listController.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(dismissCountries))
-
+        
         self.present(navigationViewController, animated: true, completion: nil)
     }
 }

@@ -273,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="469.56521739130437" y="124.55357142857142"/>
         </scene>
-        <!--Otp Verify-->
+        <!--Verify-->
         <scene sceneID="1p0-dh-IHs">
             <objects>
-                <viewController id="wft-yB-7E5" customClass="otpVerify" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wft-yB-7E5" customClass="OTPVerify" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xfZ-K0-aLh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,7 +412,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kaK-Ll-5lU"/>
+        <segue reference="fts-ts-nny"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
