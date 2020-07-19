@@ -818,7 +818,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-GS-paT">
-                                                        <rect key="frame" x="106" y="68" width="280" height="2"/>
+                                                        <rect key="frame" x="106" y="67.5" width="280" height="2"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="280" id="cE5-RP-oDg"/>
                                                         </constraints>
@@ -848,6 +848,20 @@
                                                     <constraint firstItem="fq5-Bc-9RK" firstAttribute="top" secondItem="zIL-rU-HOl" secondAttribute="top" constant="21" id="t6R-5z-VmR"/>
                                                     <constraint firstItem="CFc-kk-vLN" firstAttribute="leading" secondItem="fq5-Bc-9RK" secondAttribute="trailing" constant="13.5" id="zxZ-JB-dUB"/>
                                                 </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-7d-Izj">
+                                                <rect key="frame" x="0.0" y="114" width="414" height="188"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Performance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYT-Ci-FRl">
+                                                        <rect key="frame" x="8" y="8" width="205" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

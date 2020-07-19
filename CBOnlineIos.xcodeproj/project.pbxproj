@@ -21,6 +21,7 @@
 		FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716A9249C61200043EB81 /* DashboardViewController.swift */; };
 		FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716AB249C66480043EB81 /* ExploreViewController.swift */; };
 		FFF716FC24A19EAF0043EB81 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */; };
+		FFFDA31324C4AAE00087FB6B /* CA_Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDA31224C4AAE00087FB6B /* CA_Layer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		FFF716A9249C61200043EB81 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = CBOnlineIos/Presentation/DashboardViewController.swift; sourceTree = SOURCE_ROOT; };
 		FFF716AB249C66480043EB81 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCoursesViewController.swift; path = CBOnlineIos/Presentation/MyCoursesViewController.swift; sourceTree = SOURCE_ROOT; };
+		FFFDA31224C4AAE00087FB6B /* CA_Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CA_Layer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */,
+				FFFDA31224C4AAE00087FB6B /* CA_Layer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */,
 				57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */,
 				57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */,
+				FFFDA31324C4AAE00087FB6B /* CA_Layer.swift in Sources */,
 				FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */,
 				E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */,
 				E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */,
