@@ -1,10 +1,4 @@
-//
-//  UIViewController.swift
-//  CBOnlineIos
-//
-//  Created by Vaibhav Bisht on 14/07/20.
-//  Copyright © 2020 Coding Blocks. All rights reserved.
-//
+
 
 import UIKit
 
@@ -16,7 +10,6 @@ extension UIViewController {
         self.navigationController?.navigationBar.addGestureRecognizer(self.endEditingRecognizer())
     }
 
-    // Dismisses the keyboard from self.view
     private func endEditingRecognizer() -> UIGestureRecognizer {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
         tap.cancelsTouchesInView = false

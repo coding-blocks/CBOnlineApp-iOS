@@ -1,14 +1,7 @@
-//
-//  Login.swift
-//  CBOnlineIos
-//
-//  Created by Vaibhav Bisht on 09/07/20.
-//  Copyright © 2020 Coding Blocks. All rights reserved.
-//
+
 
 import UIKit
 import FlagPhoneNumber
-// For Disabling the Keyboard when tapped outside UITextField
 
 class Login: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     @IBOutlet weak var textView: UITextView!
@@ -149,14 +142,6 @@ extension Login: FPNTextFieldDelegate {
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
         textField.rightViewMode = .always
         if isValid{
-            print(
-                isValid,
-                textField.getFormattedPhoneNumber(format: .E164) ?? "E164: nil",
-                textField.getFormattedPhoneNumber(format: .International) ?? "International: nil",
-                textField.getFormattedPhoneNumber(format: .National) ?? "National: nil",
-                textField.getFormattedPhoneNumber(format: .RFC3966) ?? "RFC3966: nil",
-                textField.getRawPhoneNumber() ?? "Raw: nil"
-            )
             numberCheck = 1
             phoneNumberEntered = textField.getFormattedPhoneNumber(format: .International) ?? "International: nil"
         }
@@ -179,8 +164,3 @@ extension Login: FPNTextFieldDelegate {
         self.present(navigationViewController, animated: true, completion: nil)
     }
 }
-
-
-
-
-

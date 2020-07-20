@@ -1,10 +1,4 @@
-//
-//  onboardingScreen .swift
-//  CBOnlineIos
-//
-//  Created by Vaibhav Bisht on 10/06/20.
-//  Copyright © 2020 Coding Blocks. All rights reserved.
-//
+
 
 import UIKit
 class onboardingScreen: UIViewController,UIScrollViewDelegate {

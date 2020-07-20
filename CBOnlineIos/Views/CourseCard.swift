@@ -1,10 +1,4 @@
-//
-//  CourseCard.swift
-//  CBOnlineIos
-//
-//  Created by Pulkit Aggarwal on 01/06/19.
-//  Copyright © 2019 Coding Blocks. All rights reserved.
-//
+
 
 import UIKit
 
