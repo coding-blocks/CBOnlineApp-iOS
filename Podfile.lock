@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.8.2)
+  - FlagPhoneNumber (0.8.0):
+    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
+  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
   - Japx (2.1.0):
     - Japx/Core (= 2.1.0)
   - Japx/Alamofire (2.1.0):
@@ -25,6 +28,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FlagPhoneNumber
   - Japx
   - Japx/Alamofire
   - Kingfisher
@@ -33,8 +37,9 @@ DEPENDENCIES:
   - XLPagerTabStrip
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
+    - FlagPhoneNumber
     - Japx
     - Kingfisher
     - LoadingShimmer
@@ -43,12 +48,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   Japx: 4fbfa9c85c0d89e93d011b7ef55625a3de6a445e
   Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
   LoadingShimmer: d01381d4965d6a87f12dffbb3f80eaf7990f156c
   MaterialComponents: 897e26e71faa95ea71c183e056443e9344682faf
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: d4df6302f3aa968b8b9c12a77bed2eb54893a720
+PODFILE CHECKSUM: 9f96e47f6b3a5d5508b3a572f9c10abc2df67b76
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.9.1
