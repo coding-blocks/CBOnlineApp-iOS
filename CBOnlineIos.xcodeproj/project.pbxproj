@@ -11,13 +11,13 @@
 		57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */; };
 		57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */; };
 		82AEA0054B870D344E318F47 /* Pods_CBOnlineIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC848350B72E35000EBA848 /* Pods_CBOnlineIos.framework */; };
-		E5123ABA22857462005722AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123AB922857462005722AC /* AppDelegate.swift */; };
 		E5123ABC22857462005722AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123ABB22857462005722AC /* ViewController.swift */; };
 		E5123ABF22857462005722AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5123ABD22857462005722AC /* Main.storyboard */; };
 		E5123AC122857464005722AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5123AC022857464005722AC /* Assets.xcassets */; };
 		E5123AC422857464005722AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5123AC222857464005722AC /* LaunchScreen.storyboard */; };
 		E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */; };
 		E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE422A2EA75007A20B5 /* CourseCard.swift */; };
+		FF11F51F24C9A2A2007600F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */; };
 		FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716A9249C61200043EB81 /* DashboardViewController.swift */; };
 		FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716AB249C66480043EB81 /* ExploreViewController.swift */; };
 		FFF716FC24A19EAF0043EB81 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */; };
@@ -32,7 +32,6 @@
 		6EC848350B72E35000EBA848 /* Pods_CBOnlineIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CBOnlineIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		932BC159D3896363EBD793BD /* Pods-CBOnlineIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBOnlineIos.release.xcconfig"; path = "Target Support Files/Pods-CBOnlineIos/Pods-CBOnlineIos.release.xcconfig"; sourceTree = "<group>"; };
 		E5123AB622857462005722AC /* CBOnlineIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBOnlineIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5123AB922857462005722AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5123ABB22857462005722AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5123ABE22857462005722AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5123AC022857464005722AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		E5123AC522857464005722AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		E5DBADE422A2EA75007A20B5 /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
+		FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Presentation/AppDelegate.swift; sourceTree = "<group>"; };
 		FFF716A9249C61200043EB81 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = CBOnlineIos/Presentation/DashboardViewController.swift; sourceTree = SOURCE_ROOT; };
 		FFF716AB249C66480043EB81 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCoursesViewController.swift; path = CBOnlineIos/Presentation/MyCoursesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -121,7 +121,7 @@
 				E5DBADE022A2EA22007A20B5 /* Extensions */,
 				57CACB71249144640013E3AA /* Presentation */,
 				57CACB72249144B00013E3AA /* StoryBoards */,
-				E5123AB922857462005722AC /* AppDelegate.swift */,
+				FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */,
 				E5123AC022857464005722AC /* Assets.xcassets */,
 				E5123AC522857464005722AC /* Info.plist */,
 			);
@@ -262,8 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF11F51F24C9A2A2007600F0 /* AppDelegate.swift in Sources */,
 				E5123ABC22857462005722AC /* ViewController.swift in Sources */,
-				E5123ABA22857462005722AC /* AppDelegate.swift in Sources */,
 				57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */,
 				57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */,
 				57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */,
