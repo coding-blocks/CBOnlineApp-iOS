@@ -17,6 +17,7 @@
 		E5123AC422857464005722AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5123AC222857464005722AC /* LaunchScreen.storyboard */; };
 		E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */; };
 		E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE422A2EA75007A20B5 /* CourseCard.swift */; };
+		FF022ACC24D153E500816E24 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF022ACB24D153E500816E24 /* ProgressView.swift */; };
 		FF11F51F24C9A2A2007600F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */; };
 		FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716A9249C61200043EB81 /* DashboardViewController.swift */; };
 		FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716AB249C66480043EB81 /* ExploreViewController.swift */; };
@@ -39,6 +40,7 @@
 		E5123AC522857464005722AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		E5DBADE422A2EA75007A20B5 /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
+		FF022ACB24D153E500816E24 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Presentation/AppDelegate.swift; sourceTree = "<group>"; };
 		FFF716A9249C61200043EB81 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = CBOnlineIos/Presentation/DashboardViewController.swift; sourceTree = SOURCE_ROOT; };
 		FFF716AB249C66480043EB81 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				E5DBADE422A2EA75007A20B5 /* CourseCard.swift */,
 				57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */,
 				57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */,
+				FF022ACB24D153E500816E24 /* ProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */,
 				57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */,
 				57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */,
+				FF022ACC24D153E500816E24 /* ProgressView.swift in Sources */,
 				FFFDA31324C4AAE00087FB6B /* CA_Layer.swift in Sources */,
 				FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */,
 				E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */,
