@@ -14,5 +14,6 @@ pod 'Kingfisher'
 pod 'XLPagerTabStrip'
 pod 'MaterialComponents/NavigationDrawer'
 pod 'FlagPhoneNumber'
-
+pod 'MaterialComponents/TextControls+FilledTextAreas'
+pod 'MaterialComponents/TextControls+FilledTextFields'
 end
