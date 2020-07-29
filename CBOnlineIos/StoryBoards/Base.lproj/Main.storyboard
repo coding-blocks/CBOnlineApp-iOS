@@ -807,17 +807,11 @@
                                                 <rect key="frame" x="0.0" y="8" width="414" height="98"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Progress:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq5-Bc-9RK">
-                                                        <rect key="frame" x="106" y="21" width="141" height="27"/>
+                                                        <rect key="frame" x="105.5" y="21" width="141.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-GS-paT">
-                                                        <rect key="frame" x="106" y="67.5" width="280" height="2"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="280" id="cE5-RP-oDg"/>
-                                                        </constraints>
-                                                    </progressView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fire" translatesAutoresizingMaskIntoConstraints="NO" id="3Hf-ZR-ceX">
                                                         <rect key="frame" x="8" y="8" width="95" height="82"/>
                                                         <constraints>
@@ -831,16 +825,17 @@
                                                         <color key="textColor" red="0.89206516739999997" green="0.48044180869999997" blue="0.3411371708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DVK-GM-fNI" customClass="CustomHorizontalProgressView" customModule="CBOnlineIos" customModuleProvider="target">
+                                                        <rect key="frame" x="105" y="56" width="301" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="CFc-kk-vLN" firstAttribute="top" secondItem="zIL-rU-HOl" secondAttribute="top" constant="21" id="1X4-6g-2ag"/>
-                                                    <constraint firstItem="VEf-GS-paT" firstAttribute="top" secondItem="fq5-Bc-9RK" secondAttribute="bottom" constant="20" id="3xd-Vz-p0u"/>
                                                     <constraint firstItem="3Hf-ZR-ceX" firstAttribute="leading" secondItem="zIL-rU-HOl" secondAttribute="leading" constant="8" id="7PQ-kH-DI0"/>
                                                     <constraint firstItem="fq5-Bc-9RK" firstAttribute="leading" secondItem="3Hf-ZR-ceX" secondAttribute="trailing" constant="2.5" id="BiQ-qL-JdW"/>
-                                                    <constraint firstItem="VEf-GS-paT" firstAttribute="trailing" secondItem="zIL-rU-HOl" secondAttribute="trailingMargin" constant="-20" id="D4t-YS-oGX"/>
-                                                    <constraint firstAttribute="bottom" secondItem="VEf-GS-paT" secondAttribute="bottom" constant="28.5" id="IJH-5m-wnU"/>
-                                                    <constraint firstItem="VEf-GS-paT" firstAttribute="top" secondItem="CFc-kk-vLN" secondAttribute="bottom" constant="19.5" id="Wy6-t5-JvH"/>
                                                     <constraint firstItem="3Hf-ZR-ceX" firstAttribute="top" secondItem="zIL-rU-HOl" secondAttribute="top" constant="8" id="cID-Hx-4vM"/>
                                                     <constraint firstAttribute="trailing" secondItem="CFc-kk-vLN" secondAttribute="trailing" constant="140" id="dQ0-Wn-1ac"/>
                                                     <constraint firstItem="CFc-kk-vLN" firstAttribute="leading" secondItem="fq5-Bc-9RK" secondAttribute="trailing" constant="-4" id="hI1-m1-cdx"/>
@@ -1074,6 +1069,7 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="waveform.path.ecg" catalog="system" id="vQF-wz-D6p"/>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
+                        <outlet property="CourseProgress" destination="DVK-GM-fNI" id="nzw-aU-l4q"/>
                         <outlet property="navBarView" destination="t0V-jf-U5q" id="15F-mN-sJ7"/>
                         <outletCollection property="performaceViews" destination="b2c-Bu-HHZ" collectionClass="NSMutableArray" id="z8v-d7-sl4"/>
                         <outletCollection property="performaceViews" destination="osc-DZ-RO6" collectionClass="NSMutableArray" id="wOE-ML-c94"/>
