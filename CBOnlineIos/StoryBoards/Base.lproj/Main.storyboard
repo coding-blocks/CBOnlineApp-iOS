@@ -821,6 +821,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="N7d-ZQ-mqq"/>
                     <navigationItem key="navigationItem" id="knT-Gi-ixc"/>
+                    <connections>
+                        <outlet property="navigationView" destination="Yr9-wZ-ZYY" id="0eM-Gh-lX1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NS5-w9-ers" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -880,6 +883,9 @@
                         <viewLayoutGuide key="safeArea" id="9Ba-4I-CfJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="waveform.path.ecg" catalog="system" id="h6J-6D-th0"/>
+                    <connections>
+                        <outlet property="navigationView" destination="Unw-QX-e6P" id="VPJ-Fx-6zV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijg-0W-3uq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

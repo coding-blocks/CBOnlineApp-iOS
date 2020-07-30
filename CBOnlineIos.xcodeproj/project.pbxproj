@@ -25,6 +25,8 @@
 		E5123AC422857464005722AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5123AC222857464005722AC /* LaunchScreen.storyboard */; };
 		E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */; };
 		E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE422A2EA75007A20B5 /* CourseCard.swift */; };
+		FF29B7FD24D2EA94006858FE /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */; };
+		FF29B7FF24D2EAB6006858FE /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		E5123AC522857464005722AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		E5DBADE422A2EA75007A20B5 /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
+		FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				57A36F2B24B64F4E00A1DA56 /* Login.swift */,
 				57A36F2D24B64F8900A1DA56 /* OTPVerify.swift */,
 				5728249924C6FF8B009CEE87 /* Email.swift */,
+				FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */,
+				FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 			files = (
 				E5123ABC22857462005722AC /* ViewController.swift in Sources */,
 				57A36F2C24B64F4E00A1DA56 /* Login.swift in Sources */,
+				FF29B7FD24D2EA94006858FE /* ExploreViewController.swift in Sources */,
 				57A03B7324BDDD2A00EA9B6A /* UIViewController.swift in Sources */,
 				E5123ABA22857462005722AC /* AppDelegate.swift in Sources */,
 				57A14D1B24D0533300D2AC13 /* MDCFilledTextField.swift in Sources */,
@@ -285,6 +292,7 @@
 				5728249A24C6FF8B009CEE87 /* Email.swift in Sources */,
 				E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */,
 				E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */,
+				FF29B7FF24D2EAB6006858FE /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
