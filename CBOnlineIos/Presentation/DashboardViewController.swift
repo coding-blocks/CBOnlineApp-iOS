@@ -19,7 +19,7 @@ class DashboardViewController: UIViewController {
         for views in performaceViews{
             views.layer.applySketchShadow(color: .gray, alpha: 0.3, x: 0, y: 0, blur: 0, spread: 1)
         }
-        CourseProgress.progress = 50
+        CourseProgress.progress = 91
     }
     
 }
