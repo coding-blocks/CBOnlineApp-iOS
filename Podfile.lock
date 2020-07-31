@@ -13,6 +13,7 @@ PODS:
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
   - LoadingShimmer (1.0.3)
+  - MaterialComponents/AnimationTiming (111.0.0)
   - MaterialComponents/Availability (111.0.0)
   - MaterialComponents/Elevation (111.0.0):
     - MaterialComponents/Availability
@@ -29,11 +30,52 @@ PODS:
   - MaterialComponents/private/Color (111.0.0):
     - MaterialComponents/Availability
   - MaterialComponents/private/Math (111.0.0)
+  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (111.0.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+FilledStyle (111.0.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - "MaterialComponents/private/TextControlsPrivate+UnderlinedStyle"
+  - "MaterialComponents/private/TextControlsPrivate+Shared (111.0.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/TextControls+Enums"
+  - "MaterialComponents/private/TextControlsPrivate+TextFields (111.0.0)":
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+UnderlinedStyle (111.0.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
   - MaterialComponents/private/UIMetrics (111.0.0):
     - MaterialComponents/private/Application
   - MaterialComponents/ShadowElevations (111.0.0)
   - MaterialComponents/ShadowLayer (111.0.0):
     - MaterialComponents/ShadowElevations
+  - "MaterialComponents/TextControls+BaseTextAreas (111.0.0)":
+    - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+BaseTextFields (111.0.0)":
+    - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - "MaterialComponents/private/TextControlsPrivate+TextFields"
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+Enums (111.0.0)"
+  - "MaterialComponents/TextControls+FilledTextAreas (111.0.0)":
+    - MaterialComponents/Availability
+    - "MaterialComponents/private/TextControlsPrivate+FilledStyle"
+    - "MaterialComponents/TextControls+BaseTextAreas"
+  - "MaterialComponents/TextControls+FilledTextFields (111.0.0)":
+    - MaterialComponents/Availability
+    - "MaterialComponents/private/TextControlsPrivate+FilledStyle"
+    - "MaterialComponents/TextControls+BaseTextFields"
+  - MDFInternationalization (2.0.0)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
@@ -44,6 +86,8 @@ DEPENDENCIES:
   - Kingfisher
   - LoadingShimmer
   - MaterialComponents/NavigationDrawer
+  - "MaterialComponents/TextControls+FilledTextAreas"
+  - "MaterialComponents/TextControls+FilledTextFields"
   - XLPagerTabStrip
 
 SPEC REPOS:
@@ -54,6 +98,7 @@ SPEC REPOS:
     - Kingfisher
     - LoadingShimmer
     - MaterialComponents
+    - MDFInternationalization
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
@@ -63,8 +108,9 @@ SPEC CHECKSUMS:
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   LoadingShimmer: dd681218498ec9648f572b845a7299b9c62e8e30
   MaterialComponents: 533042da998b97ad13a6f544268f8026e8161cc5
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 9f96e47f6b3a5d5508b3a572f9c10abc2df67b76
+PODFILE CHECKSUM: 489848bc218f8184e2f6d5cd43cd88d51ac26670
 
 COCOAPODS: 1.9.0.beta.3

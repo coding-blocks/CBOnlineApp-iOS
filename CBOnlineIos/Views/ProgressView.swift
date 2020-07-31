@@ -53,7 +53,14 @@ class CustomHorizontalProgressView: UIView {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = path.bounds
         
-        gradient.colors = [UIColor(red: 0.87, green: 0.43, blue: 0.38, alpha: 1).cgColor, UIColor(red: 0.937, green: 0.6, blue: 0.325, alpha: 1).cgColor]
+        if progress < 0.9 {
+            gradient.colors = [UIColor(red: 0.87, green: 0.43, blue: 0.38, alpha: 1).cgColor, UIColor(red: 0.937, green: 0.6, blue: 0.325, alpha: 1).cgColor]
+        }
+        
+        else {
+            gradient.colors = [UIColor(red: 0.513, green: 0.85, blue: 0.231, alpha: 1).cgColor, UIColor(red: 0.149, green: 0.658, blue: 0.486, alpha: 1).cgColor]
+        }
+        
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
         gradient.cornerRadius = height / 2.0
