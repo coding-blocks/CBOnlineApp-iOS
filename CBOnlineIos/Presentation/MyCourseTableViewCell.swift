@@ -1,5 +1,5 @@
 //
-//  CourseTableViewCell.swift
+//  MyCourseTableViewCell.swift
 //  CBOnlineIos
 //
 //  Created by Pushpinder Pal Singh on 30/07/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CourseTableViewCell: UITableViewCell {
+class MyCourseTableViewCell: UITableViewCell {
 
     @IBOutlet weak var courseImage: UIImageView!
     @IBOutlet weak var headerLabel: UILabel!
