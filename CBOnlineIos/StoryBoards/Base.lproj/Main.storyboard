@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="URc-Kn-EgX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jTG-HJ-ELi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Library-->
         <scene sceneID="bRd-nH-wXE">
             <objects>
-                <viewController id="JD8-Om-Yn2" sceneMemberID="viewController">
+                <viewController id="JD8-Om-Yn2" customClass="LibraryViewController" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Rp-uR-oIp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,20 +43,31 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vGh-H2-JPS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="dBV-qy-kIt" firstAttribute="top" secondItem="BW9-7Y-u6q" secondAttribute="top" id="9zR-YV-92r"/>
+                            <constraint firstItem="vGh-H2-JPS" firstAttribute="trailing" secondItem="BW9-7Y-u6q" secondAttribute="trailing" id="LlI-ET-Eqe"/>
+                            <constraint firstItem="vGh-H2-JPS" firstAttribute="top" secondItem="dBV-qy-kIt" secondAttribute="bottom" id="Ue3-1t-fDH"/>
                             <constraint firstItem="dBV-qy-kIt" firstAttribute="trailing" secondItem="BW9-7Y-u6q" secondAttribute="trailing" id="d56-g4-1hw"/>
                             <constraint firstItem="dBV-qy-kIt" firstAttribute="leading" secondItem="BW9-7Y-u6q" secondAttribute="leading" id="dqL-qI-z8K"/>
+                            <constraint firstItem="vGh-H2-JPS" firstAttribute="bottom" secondItem="BW9-7Y-u6q" secondAttribute="bottom" id="s99-ff-GsV"/>
+                            <constraint firstItem="vGh-H2-JPS" firstAttribute="leading" secondItem="BW9-7Y-u6q" secondAttribute="leading" id="vRR-sW-Dfr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BW9-7Y-u6q"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Library" image="archivebox" catalog="system" id="GbS-gj-txZ"/>
+                    <connections>
+                        <outlet property="LibraryTableView" destination="vGh-H2-JPS" id="EsM-eF-XcP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O42-Pu-oEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3225" y="879"/>
+            <point key="canvasLocation" x="3224.6376811594205" y="878.57142857142856"/>
         </scene>
         <!--My Courses-->
         <scene sceneID="wtS-4A-oee">

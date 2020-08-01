@@ -26,6 +26,9 @@
 		FF09EEA324D57AE1005DDAC2 /* ButtonFillGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE9F24D57AE1005DDAC2 /* ButtonFillGradient.swift */; };
 		FF09EEA424D57AE1005DDAC2 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EEA024D57AE1005DDAC2 /* CourseCard.swift */; };
 		FF11F51F24C9A2A2007600F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */; };
+		FF7C5F7824D59F7D00E6BBCC /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7C5F7724D59F7D00E6BBCC /* LibraryViewController.swift */; };
+		FF7C5F7B24D5A2F400E6BBCC /* LibraryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7C5F7924D5A2F400E6BBCC /* LibraryTableViewCell.xib */; };
+		FF7C5F7C24D5A2F400E6BBCC /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7C5F7A24D5A2F400E6BBCC /* LibraryTableViewCell.swift */; };
 		FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716A9249C61200043EB81 /* DashboardViewController.swift */; };
 		FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716AB249C66480043EB81 /* ExploreViewController.swift */; };
 		FFF716FC24A19EAF0043EB81 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */; };
@@ -56,6 +59,9 @@
 		FF09EE9F24D57AE1005DDAC2 /* ButtonFillGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonFillGradient.swift; path = ../../../CB_App_Clone/CBOnlineIos/Views/ButtonFillGradient.swift; sourceTree = "<group>"; };
 		FF09EEA024D57AE1005DDAC2 /* CourseCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseCard.swift; path = ../../../CB_App_Clone/CBOnlineIos/Views/CourseCard.swift; sourceTree = "<group>"; };
 		FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Presentation/AppDelegate.swift; sourceTree = "<group>"; };
+		FF7C5F7724D59F7D00E6BBCC /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		FF7C5F7924D5A2F400E6BBCC /* LibraryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibraryTableViewCell.xib; sourceTree = "<group>"; };
+		FF7C5F7A24D5A2F400E6BBCC /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		FFF716A9249C61200043EB81 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = CBOnlineIos/Presentation/DashboardViewController.swift; sourceTree = SOURCE_ROOT; };
 		FFF716AB249C66480043EB81 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCoursesViewController.swift; path = CBOnlineIos/Presentation/MyCoursesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -102,6 +108,9 @@
 				FFF716A9249C61200043EB81 /* DashboardViewController.swift */,
 				FFF716AB249C66480043EB81 /* ExploreViewController.swift */,
 				FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */,
+				FF7C5F7724D59F7D00E6BBCC /* LibraryViewController.swift */,
+				FF7C5F7A24D5A2F400E6BBCC /* LibraryTableViewCell.swift */,
+				FF7C5F7924D5A2F400E6BBCC /* LibraryTableViewCell.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -231,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF7C5F7B24D5A2F400E6BBCC /* LibraryTableViewCell.xib in Resources */,
 				E5123AC422857464005722AC /* LaunchScreen.storyboard in Resources */,
 				E5123AC122857464005722AC /* Assets.xcassets in Resources */,
 				E5123ABF22857462005722AC /* Main.storyboard in Resources */,
@@ -292,6 +302,7 @@
 				FF09EE8F24D57AC8005DDAC2 /* Extensions+UIView.swift in Sources */,
 				FF09EEA224D57AE1005DDAC2 /* ButtonBorderGradient.swift in Sources */,
 				FF09EEA424D57AE1005DDAC2 /* CourseCard.swift in Sources */,
+				FF7C5F7824D59F7D00E6BBCC /* LibraryViewController.swift in Sources */,
 				FF09EE9A24D57AD4005DDAC2 /* Email.swift in Sources */,
 				FF09EE9124D57AC8005DDAC2 /* MDCFilledTextField.swift in Sources */,
 				FF022ACC24D153E500816E24 /* ProgressView.swift in Sources */,
@@ -302,6 +313,7 @@
 				FF09EE9924D57AD4005DDAC2 /* ViewController.swift in Sources */,
 				FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */,
 				FF09EEA324D57AE1005DDAC2 /* ButtonFillGradient.swift in Sources */,
+				FF7C5F7C24D5A2F400E6BBCC /* LibraryTableViewCell.swift in Sources */,
 				FF09EE9B24D57AD4005DDAC2 /* onboardingScreen .swift in Sources */,
 				FF09EE9224D57AC8005DDAC2 /* UIViewController.swift in Sources */,
 				FFF716FC24A19EAF0043EB81 /* MyCoursesViewController.swift in Sources */,
