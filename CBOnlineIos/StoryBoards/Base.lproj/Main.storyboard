@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JWH-iV-md2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4pA-Iu-nFb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -622,16 +622,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-oy-6Gk">
+                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-oy-6Gk">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="PAj-E1-b3u"/>
                                 </constraints>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="textShadowColor" red="0.1100751236" green="0.1171159521" blue="0.1490235925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <offsetWrapper key="textShadowOffset" horizontal="-150" vertical="-3"/>
                                 </textAttributes>
                                 <items>
@@ -650,25 +650,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIf-EE-gvU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="VYo-q6-VcB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nQs-oy-6Gk" firstAttribute="top" secondItem="7aK-4z-pgO" secondAttribute="top" id="GyL-P1-Lvm"/>
-                            <constraint firstItem="nQs-oy-6Gk" firstAttribute="trailing" secondItem="7aK-4z-pgO" secondAttribute="trailing" id="HFC-Yv-N90"/>
-                            <constraint firstItem="nQs-oy-6Gk" firstAttribute="leading" secondItem="7aK-4z-pgO" secondAttribute="leading" id="oZ1-ar-fWe"/>
+                            <constraint firstItem="nQs-oy-6Gk" firstAttribute="centerX" secondItem="srz-gE-Pkm" secondAttribute="centerX" id="EqB-hw-2E8"/>
+                            <constraint firstItem="nQs-oy-6Gk" firstAttribute="top" secondItem="7aK-4z-pgO" secondAttribute="top" id="So7-Iu-Pa0"/>
+                            <constraint firstItem="mIf-EE-gvU" firstAttribute="top" secondItem="srz-gE-Pkm" secondAttribute="top" id="Yh3-8J-g58"/>
+                            <constraint firstItem="nQs-oy-6Gk" firstAttribute="leading" secondItem="7aK-4z-pgO" secondAttribute="leading" id="jVA-2X-88R"/>
+                            <constraint firstItem="mIf-EE-gvU" firstAttribute="leading" secondItem="7aK-4z-pgO" secondAttribute="leading" id="oVx-Qj-b0b"/>
+                            <constraint firstItem="mIf-EE-gvU" firstAttribute="trailing" secondItem="7aK-4z-pgO" secondAttribute="trailing" id="rjB-5f-G1G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7aK-4z-pgO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Courses" image="video" catalog="system" id="56s-EV-vkw"/>
+                    <connections>
+                        <outlet property="NavigationBar" destination="mIf-EE-gvU" id="92z-gT-hXz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e7q-Qa-epU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2178" y="933"/>
+            <point key="canvasLocation" x="2175.36231884058" y="932.8125"/>
         </scene>
         <!--Doubts-->
         <scene sceneID="o1P-ae-zZV">
             <objects>
-                <viewController id="NCQ-Ib-uNO" sceneMemberID="viewController">
+                <viewController id="NCQ-Ib-uNO" customClass="DoubtsViewController" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kCR-0x-4zT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -701,16 +714,30 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdr-76-czB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="jzv-TG-cuP"/>
+                                    <constraint firstAttribute="height" constant="88" id="wvt-Gd-SY7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="y33-ti-i9P" firstAttribute="top" secondItem="vQc-mG-AB5" secondAttribute="top" id="1vj-nl-6db"/>
                             <constraint firstItem="y33-ti-i9P" firstAttribute="trailing" secondItem="vQc-mG-AB5" secondAttribute="trailing" id="BXr-04-FJ5"/>
                             <constraint firstItem="y33-ti-i9P" firstAttribute="leading" secondItem="vQc-mG-AB5" secondAttribute="leading" id="RjJ-z7-mPM"/>
+                            <constraint firstItem="qdr-76-czB" firstAttribute="trailing" secondItem="vQc-mG-AB5" secondAttribute="trailing" id="SfK-a0-MGz"/>
+                            <constraint firstItem="qdr-76-czB" firstAttribute="leading" secondItem="vQc-mG-AB5" secondAttribute="leading" id="VEt-Ud-Opu"/>
+                            <constraint firstItem="qdr-76-czB" firstAttribute="top" secondItem="kCR-0x-4zT" secondAttribute="top" id="oOX-XW-aYE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vQc-mG-AB5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Doubts" image="message" catalog="system" id="g7y-Kd-kUL"/>
+                    <connections>
+                        <outlet property="NavigationBar" destination="qdr-76-czB" id="FXY-m8-fsk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4w-9P-tyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -719,7 +746,7 @@
         <!--Library-->
         <scene sceneID="TKC-8S-eXy">
             <objects>
-                <viewController id="mdN-Uw-bg7" sceneMemberID="viewController">
+                <viewController id="mdN-Uw-bg7" customClass="LibraryViewController" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O2f-bf-kIa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -752,16 +779,31 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wh-wo-QlE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="74n-f3-hCH"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="88" id="ajE-vz-J1e"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="iPX-US-nD3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="1t1-Jb-aEc" firstAttribute="top" secondItem="byP-mM-or8" secondAttribute="top" id="CLP-ol-nlS"/>
                             <constraint firstItem="1t1-Jb-aEc" firstAttribute="trailing" secondItem="byP-mM-or8" secondAttribute="trailing" id="QzY-g8-cR0"/>
+                            <constraint firstItem="0Wh-wo-QlE" firstAttribute="trailing" secondItem="byP-mM-or8" secondAttribute="trailing" id="Udp-G1-PVR"/>
                             <constraint firstItem="1t1-Jb-aEc" firstAttribute="leading" secondItem="byP-mM-or8" secondAttribute="leading" id="X0e-9d-KJw"/>
+                            <constraint firstItem="0Wh-wo-QlE" firstAttribute="leading" secondItem="byP-mM-or8" secondAttribute="leading" id="h5X-Ib-xcs"/>
+                            <constraint firstItem="0Wh-wo-QlE" firstAttribute="top" secondItem="O2f-bf-kIa" secondAttribute="top" id="wXX-yJ-Taq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="byP-mM-or8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Library" image="archivebox" catalog="system" id="T4J-uK-G2l"/>
+                    <connections>
+                        <outlet property="NavigationBar" destination="0Wh-wo-QlE" id="gIX-6k-syt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePP-V1-b6u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
