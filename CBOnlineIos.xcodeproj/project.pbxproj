@@ -27,9 +27,7 @@
 		E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE422A2EA75007A20B5 /* CourseCard.swift */; };
 		FF29B7FD24D2EA94006858FE /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */; };
 		FF29B7FF24D2EAB6006858FE /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */; };
-		FFF21EB824D6902E0022C8A6 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF21EB724D6902E0022C8A6 /* MyCoursesViewController.swift */; };
-		FFF21EBA24D6908F0022C8A6 /* DoubtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF21EB924D6908F0022C8A6 /* DoubtsViewController.swift */; };
-		FFF21EBC24D690EC0022C8A6 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF21EBB24D690EC0022C8A6 /* LibraryViewController.swift */; };
+		FFF21EBE24D69FD10022C8A6 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF21EBD24D69FD10022C8A6 /* NavigationBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,9 +55,7 @@
 		E5DBADE422A2EA75007A20B5 /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
 		FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		FFF21EB724D6902E0022C8A6 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesViewController.swift; sourceTree = "<group>"; };
-		FFF21EB924D6908F0022C8A6 /* DoubtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtsViewController.swift; sourceTree = "<group>"; };
-		FFF21EBB24D690EC0022C8A6 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		FFF21EBD24D69FD10022C8A6 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +98,6 @@
 				5728249924C6FF8B009CEE87 /* Email.swift */,
 				FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */,
 				FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */,
-				FFF21EB724D6902E0022C8A6 /* MyCoursesViewController.swift */,
-				FFF21EB924D6908F0022C8A6 /* DoubtsViewController.swift */,
-				FFF21EBB24D690EC0022C8A6 /* LibraryViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -167,6 +160,7 @@
 				57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */,
 				57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */,
 				57A36F2724B64E7E00A1DA56 /* BorderCurve.swift */,
+				FFF21EBD24D69FD10022C8A6 /* NavigationBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,18 +282,16 @@
 			files = (
 				E5123ABC22857462005722AC /* ViewController.swift in Sources */,
 				57A36F2C24B64F4E00A1DA56 /* Login.swift in Sources */,
-				FFF21EBC24D690EC0022C8A6 /* LibraryViewController.swift in Sources */,
 				FF29B7FD24D2EA94006858FE /* ExploreViewController.swift in Sources */,
 				57A03B7324BDDD2A00EA9B6A /* UIViewController.swift in Sources */,
 				E5123ABA22857462005722AC /* AppDelegate.swift in Sources */,
-				FFF21EB824D6902E0022C8A6 /* MyCoursesViewController.swift in Sources */,
 				57A14D1B24D0533300D2AC13 /* MDCFilledTextField.swift in Sources */,
 				57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */,
 				57A36F2824B64E7E00A1DA56 /* BorderCurve.swift in Sources */,
-				FFF21EBA24D6908F0022C8A6 /* DoubtsViewController.swift in Sources */,
 				57A36F2A24B64EFD00A1DA56 /* NSAttributedString.swift in Sources */,
 				57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */,
 				57A36F2E24B64F8900A1DA56 /* OTPVerify.swift in Sources */,
+				FFF21EBE24D69FD10022C8A6 /* NavigationBarView.swift in Sources */,
 				57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */,
 				5728249A24C6FF8B009CEE87 /* Email.swift in Sources */,
 				E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */,

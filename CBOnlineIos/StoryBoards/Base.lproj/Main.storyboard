@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4pA-Iu-nFb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JWH-iV-md2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -650,7 +650,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIf-EE-gvU">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIf-EE-gvU" customClass="NavigationBarView" customModule="CBOnlineIos" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -670,9 +670,6 @@
                         <viewLayoutGuide key="safeArea" id="7aK-4z-pgO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Courses" image="video" catalog="system" id="56s-EV-vkw"/>
-                    <connections>
-                        <outlet property="NavigationBar" destination="mIf-EE-gvU" id="92z-gT-hXz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e7q-Qa-epU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -714,7 +711,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdr-76-czB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdr-76-czB" customClass="NavigationBarView" customModule="CBOnlineIos" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -735,9 +732,6 @@
                         <viewLayoutGuide key="safeArea" id="vQc-mG-AB5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Doubts" image="message" catalog="system" id="g7y-Kd-kUL"/>
-                    <connections>
-                        <outlet property="NavigationBar" destination="qdr-76-czB" id="FXY-m8-fsk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4w-9P-tyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -779,7 +773,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wh-wo-QlE">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wh-wo-QlE" customClass="NavigationBarView" customModule="CBOnlineIos" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -801,9 +795,6 @@
                         <viewLayoutGuide key="safeArea" id="byP-mM-or8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Library" image="archivebox" catalog="system" id="T4J-uK-G2l"/>
-                    <connections>
-                        <outlet property="NavigationBar" destination="0Wh-wo-QlE" id="gIX-6k-syt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePP-V1-b6u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
