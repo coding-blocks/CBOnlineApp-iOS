@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="URc-Kn-EgX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jTG-HJ-ELi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -43,12 +43,22 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POu-YT-iy1" customClass="NavigationBarView" customModule="CBOnlineIos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="uyN-7A-cTg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="POu-YT-iy1" firstAttribute="leading" secondItem="dBV-qy-kIt" secondAttribute="leading" id="9CB-oC-73l"/>
                             <constraint firstItem="dBV-qy-kIt" firstAttribute="top" secondItem="BW9-7Y-u6q" secondAttribute="top" id="9zR-YV-92r"/>
+                            <constraint firstItem="POu-YT-iy1" firstAttribute="trailing" secondItem="dBV-qy-kIt" secondAttribute="trailing" id="OOq-7n-U42"/>
                             <constraint firstItem="dBV-qy-kIt" firstAttribute="trailing" secondItem="BW9-7Y-u6q" secondAttribute="trailing" id="d56-g4-1hw"/>
                             <constraint firstItem="dBV-qy-kIt" firstAttribute="leading" secondItem="BW9-7Y-u6q" secondAttribute="leading" id="dqL-qI-z8K"/>
+                            <constraint firstItem="POu-YT-iy1" firstAttribute="bottom" secondItem="dBV-qy-kIt" secondAttribute="bottom" id="zcf-Ha-qqU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BW9-7Y-u6q"/>
                     </view>
@@ -66,6 +76,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcv-8W-MiS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="Ig5-qu-QT3">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="View" style="plain" id="AnU-jQ-fQY">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YdE-l9-qjX">
+                                                    <rect key="frame" x="20" y="11" width="185.5" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="  Recently Accessed" image="arrowtriangle.right" catalog="system">
+                                                        <color key="titleColor" red="0.89206516739999997" green="0.48044180869999997" blue="0.3411371708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" image="arrowtriangle.down" catalog="system" id="suB-uO-Ox3"/>
+                                        </leftBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5e2-q7-3M3">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
@@ -94,35 +126,25 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jcv-8W-MiS">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem id="Ig5-qu-QT3">
-                                        <leftBarButtonItems>
-                                            <barButtonItem title="View" style="plain" id="AnU-jQ-fQY">
-                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YdE-l9-qjX">
-                                                    <rect key="frame" x="20" y="11" width="185.5" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="  Recently Accessed" image="arrowtriangle.right" catalog="system">
-                                                        <color key="titleColor" red="0.89206516739999997" green="0.48044180869999997" blue="0.3411371708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </state>
-                                                </button>
-                                            </barButtonItem>
-                                            <barButtonItem title="Item" image="arrowtriangle.down" catalog="system" id="suB-uO-Ox3"/>
-                                        </leftBarButtonItems>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBM-Ww-enb" customClass="NavigationBarView" customModule="CBOnlineIos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="HMo-gF-ccL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5e2-q7-3M3" firstAttribute="leading" secondItem="BCf-jE-uii" secondAttribute="leading" id="1qi-XC-YP5"/>
+                            <constraint firstItem="xBM-Ww-enb" firstAttribute="trailing" secondItem="BCf-jE-uii" secondAttribute="trailing" id="2zm-D4-eIX"/>
+                            <constraint firstItem="xBM-Ww-enb" firstAttribute="leading" secondItem="BCf-jE-uii" secondAttribute="leading" id="72g-ZY-uhF"/>
+                            <constraint firstItem="Jcv-8W-MiS" firstAttribute="leading" secondItem="5e2-q7-3M3" secondAttribute="leading" id="ESc-MS-c4I"/>
+                            <constraint firstItem="xBM-Ww-enb" firstAttribute="top" secondItem="LZh-pY-QED" secondAttribute="top" id="H51-wJ-0Om"/>
+                            <constraint firstItem="Jcv-8W-MiS" firstAttribute="trailing" secondItem="5e2-q7-3M3" secondAttribute="trailing" id="MQy-pc-Zyc"/>
                             <constraint firstItem="5e2-q7-3M3" firstAttribute="trailing" secondItem="BCf-jE-uii" secondAttribute="trailing" id="R6h-bA-KcY"/>
                             <constraint firstItem="5e2-q7-3M3" firstAttribute="top" secondItem="BCf-jE-uii" secondAttribute="top" id="WsY-S6-jHr"/>
+                            <constraint firstItem="Jcv-8W-MiS" firstAttribute="top" secondItem="xBM-Ww-enb" secondAttribute="bottom" id="as2-cP-6oe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BCf-jE-uii"/>
                     </view>
@@ -133,14 +155,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oT-Oq-AUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="879"/>
+            <point key="canvasLocation" x="834.78260869565224" y="878.57142857142856"/>
         </scene>
         <!--Explore-->
         <scene sceneID="tLf-P3-NCL">
             <objects>
                 <viewController id="AOd-j3-8t9" customClass="ExploreViewController" customModule="CBOnlineIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pnu-aY-Zng">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1017"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ng-QB-orU" userLabel="Nav Bar ">
@@ -179,7 +201,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-jz-HJP">
-                                <rect key="frame" x="0.0" y="163" width="414" height="903"/>
+                                <rect key="frame" x="0.0" y="163" width="414" height="854"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2WZ-xW-pMx" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="854"/>
@@ -541,9 +563,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Vr-Zs-Vr0">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vr-Zs-Vr0">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -593,11 +614,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q2-L2-tUN" customClass="NavigationBarView" customModule="CBOnlineIos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="ZYU-O7-Pqm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="7Q2-L2-tUN" firstAttribute="leading" secondItem="4Vr-Zs-Vr0" secondAttribute="leading" id="34q-1w-nIt"/>
                             <constraint firstItem="lYy-0I-fQL" firstAttribute="top" secondItem="MD4-pR-quT" secondAttribute="top" id="83s-ha-Qeq"/>
+                            <constraint firstItem="7Q2-L2-tUN" firstAttribute="leading" secondItem="lYy-0I-fQL" secondAttribute="leading" id="8LH-3u-Gie"/>
+                            <constraint firstItem="7Q2-L2-tUN" firstAttribute="trailing" secondItem="4Vr-Zs-Vr0" secondAttribute="trailing" id="Efm-Xi-NFm"/>
+                            <constraint firstItem="7Q2-L2-tUN" firstAttribute="bottom" secondItem="lYy-0I-fQL" secondAttribute="bottom" id="Wo3-bs-wma"/>
                             <constraint firstItem="lYy-0I-fQL" firstAttribute="leading" secondItem="MD4-pR-quT" secondAttribute="leading" id="lOx-zW-8fH"/>
+                            <constraint firstItem="4Vr-Zs-Vr0" firstAttribute="top" secondItem="7Q2-L2-tUN" secondAttribute="bottom" id="mQD-Wa-idf"/>
+                            <constraint firstItem="7Q2-L2-tUN" firstAttribute="trailing" secondItem="lYy-0I-fQL" secondAttribute="trailing" id="mQx-dA-6ao"/>
                             <constraint firstItem="lYy-0I-fQL" firstAttribute="trailing" secondItem="MD4-pR-quT" secondAttribute="trailing" id="zJV-AA-uFl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MD4-pR-quT"/>
@@ -1607,8 +1641,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HbS-E3-FaL"/>
-        <segue reference="fHJ-gw-k8j"/>
+        <segue reference="vYt-f7-AcU"/>
+        <segue reference="CrG-2p-DaZ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.95243626830000006" green="0.44801968339999998" blue="0.29030516740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
