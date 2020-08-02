@@ -109,9 +109,16 @@
                                                     <state key="normal" title="  Recently Accessed" image="arrowtriangle.right" catalog="system">
                                                         <color key="titleColor" red="0.89206516739999997" green="0.48044180869999997" blue="0.3411371708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="recentlyPressed:" destination="1cS-sX-YtO" eventType="touchUpInside" id="ZAf-bw-Gge"/>
+                                                    </connections>
                                                 </button>
                                             </barButtonItem>
-                                            <barButtonItem title="Item" image="arrowtriangle.down" catalog="system" id="suB-uO-Ox3"/>
+                                            <barButtonItem title="Item" image="arrowtriangle.down" catalog="system" id="suB-uO-Ox3">
+                                                <connections>
+                                                    <action selector="pleasework:" destination="1cS-sX-YtO" id="2ZB-uE-fgg"/>
+                                                </connections>
+                                            </barButtonItem>
                                         </leftBarButtonItems>
                                     </navigationItem>
                                 </items>

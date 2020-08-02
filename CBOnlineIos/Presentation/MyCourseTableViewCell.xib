@@ -76,7 +76,7 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" priority="900" constant="86" id="8VN-Yb-Tzu"/>
+                            <constraint firstAttribute="height" priority="900" constant="83" id="GQl-Bs-Exu"/>
                         </constraints>
                     </stackView>
                 </subviews>

@@ -28,6 +28,7 @@
 		FF09EEA724D57F1E005DDAC2 /* MyCourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF09EEA524D57F1E005DDAC2 /* MyCourseTableViewCell.xib */; };
 		FF09EEA824D57F1E005DDAC2 /* MyCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EEA624D57F1E005DDAC2 /* MyCourseTableViewCell.swift */; };
 		FF11F51F24C9A2A2007600F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */; };
+		FFF21EB624D5D0A30022C8A6 /* CustomBottomSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF21EB524D5D0A30022C8A6 /* CustomBottomSheetTableViewCell.swift */; };
 		FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716A9249C61200043EB81 /* DashboardViewController.swift */; };
 		FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716AB249C66480043EB81 /* ExploreViewController.swift */; };
 		FFF716FC24A19EAF0043EB81 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */; };
@@ -60,6 +61,7 @@
 		FF09EEA524D57F1E005DDAC2 /* MyCourseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCourseTableViewCell.xib; sourceTree = "<group>"; };
 		FF09EEA624D57F1E005DDAC2 /* MyCourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCourseTableViewCell.swift; sourceTree = "<group>"; };
 		FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Presentation/AppDelegate.swift; sourceTree = "<group>"; };
+		FFF21EB524D5D0A30022C8A6 /* CustomBottomSheetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBottomSheetTableViewCell.swift; sourceTree = "<group>"; };
 		FFF716A9249C61200043EB81 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = CBOnlineIos/Presentation/DashboardViewController.swift; sourceTree = SOURCE_ROOT; };
 		FFF716AB249C66480043EB81 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCoursesViewController.swift; path = CBOnlineIos/Presentation/MyCoursesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -168,6 +170,7 @@
 		E5DBADE322A2EA60007A20B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FFF21EB524D5D0A30022C8A6 /* CustomBottomSheetTableViewCell.swift */,
 				FF09EE9D24D57AE1005DDAC2 /* BorderCurve.swift */,
 				FF09EE9E24D57AE1005DDAC2 /* ButtonBorderGradient.swift */,
 				FF09EE9F24D57AE1005DDAC2 /* ButtonFillGradient.swift */,
@@ -296,6 +299,7 @@
 				FF09EE9C24D57AD4005DDAC2 /* Login.swift in Sources */,
 				FF09EEA124D57AE1005DDAC2 /* BorderCurve.swift in Sources */,
 				FF11F51F24C9A2A2007600F0 /* AppDelegate.swift in Sources */,
+				FFF21EB624D5D0A30022C8A6 /* CustomBottomSheetTableViewCell.swift in Sources */,
 				FF09EE8F24D57AC8005DDAC2 /* Extensions+UIView.swift in Sources */,
 				FF09EEA824D57F1E005DDAC2 /* MyCourseTableViewCell.swift in Sources */,
 				FF09EEA224D57AE1005DDAC2 /* ButtonBorderGradient.swift in Sources */,
