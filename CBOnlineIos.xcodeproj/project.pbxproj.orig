@@ -7,61 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CACB6F2491440D0013E3AA /* onboardingScreen .swift */; };
+		57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */; };
+		57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */; };
 		82AEA0054B870D344E318F47 /* Pods_CBOnlineIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC848350B72E35000EBA848 /* Pods_CBOnlineIos.framework */; };
+		E5123ABA22857462005722AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123AB922857462005722AC /* AppDelegate.swift */; };
+		E5123ABC22857462005722AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123ABB22857462005722AC /* ViewController.swift */; };
 		E5123ABF22857462005722AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5123ABD22857462005722AC /* Main.storyboard */; };
 		E5123AC122857464005722AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5123AC022857464005722AC /* Assets.xcassets */; };
 		E5123AC422857464005722AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5123AC222857464005722AC /* LaunchScreen.storyboard */; };
-		FF022ACC24D153E500816E24 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF022ACB24D153E500816E24 /* ProgressView.swift */; };
-		FF09EE8F24D57AC8005DDAC2 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE8B24D57AC8005DDAC2 /* Extensions+UIView.swift */; };
-		FF09EE9024D57AC8005DDAC2 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE8C24D57AC8005DDAC2 /* NSAttributedString.swift */; };
-		FF09EE9124D57AC8005DDAC2 /* MDCFilledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE8D24D57AC8005DDAC2 /* MDCFilledTextField.swift */; };
-		FF09EE9224D57AC8005DDAC2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE8E24D57AC8005DDAC2 /* UIViewController.swift */; };
-		FF09EE9824D57AD4005DDAC2 /* OTPVerify.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE9324D57AD4005DDAC2 /* OTPVerify.swift */; };
-		FF09EE9924D57AD4005DDAC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE9424D57AD4005DDAC2 /* ViewController.swift */; };
-		FF09EE9A24D57AD4005DDAC2 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE9524D57AD4005DDAC2 /* Email.swift */; };
-		FF09EE9B24D57AD4005DDAC2 /* onboardingScreen .swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE9624D57AD4005DDAC2 /* onboardingScreen .swift */; };
-		FF09EE9C24D57AD4005DDAC2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE9724D57AD4005DDAC2 /* Login.swift */; };
-		FF09EEA124D57AE1005DDAC2 /* BorderCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE9D24D57AE1005DDAC2 /* BorderCurve.swift */; };
-		FF09EEA224D57AE1005DDAC2 /* ButtonBorderGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE9E24D57AE1005DDAC2 /* ButtonBorderGradient.swift */; };
-		FF09EEA324D57AE1005DDAC2 /* ButtonFillGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EE9F24D57AE1005DDAC2 /* ButtonFillGradient.swift */; };
-		FF09EEA424D57AE1005DDAC2 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09EEA024D57AE1005DDAC2 /* CourseCard.swift */; };
-		FF11F51F24C9A2A2007600F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */; };
-		FF9DDB5A24D71C0F00694413 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9DDB5924D71C0F00694413 /* NavigationBarView.swift */; };
-		FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716A9249C61200043EB81 /* DashboardViewController.swift */; };
-		FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716AB249C66480043EB81 /* ExploreViewController.swift */; };
-		FFF716FC24A19EAF0043EB81 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */; };
-		FFFDA31324C4AAE00087FB6B /* CA_Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDA31224C4AAE00087FB6B /* CA_Layer.swift */; };
+		E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */; };
+		E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBADE422A2EA75007A20B5 /* CourseCard.swift */; };
+<<<<<<< HEAD
+		FF29B7FD24D2EA94006858FE /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */; };
+		FF29B7FF24D2EAB6006858FE /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */; };
+		FFF21EBE24D69FD10022C8A6 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF21EBD24D69FD10022C8A6 /* NavigationBarView.swift */; };
+=======
+>>>>>>> Onboarding Screen added
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29A67E85AF305C97A6C0CACB /* Pods-CBOnlineIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBOnlineIos.debug.xcconfig"; path = "Target Support Files/Pods-CBOnlineIos/Pods-CBOnlineIos.debug.xcconfig"; sourceTree = "<group>"; };
+		57CACB6F2491440D0013E3AA /* onboardingScreen .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "onboardingScreen .swift"; sourceTree = "<group>"; };
+		57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFillGradient.swift; sourceTree = "<group>"; };
+		57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBorderGradient.swift; sourceTree = "<group>"; };
 		6EC848350B72E35000EBA848 /* Pods_CBOnlineIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CBOnlineIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		932BC159D3896363EBD793BD /* Pods-CBOnlineIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBOnlineIos.release.xcconfig"; path = "Target Support Files/Pods-CBOnlineIos/Pods-CBOnlineIos.release.xcconfig"; sourceTree = "<group>"; };
 		E5123AB622857462005722AC /* CBOnlineIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBOnlineIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5123AB922857462005722AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E5123ABB22857462005722AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5123ABE22857462005722AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5123AC022857464005722AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5123AC322857464005722AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5123AC522857464005722AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF022ACB24D153E500816E24 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
-		FF09EE8B24D57AC8005DDAC2 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extensions+UIView.swift"; path = "../../../CB_App_Clone/CBOnlineIos/Extensions/Extensions+UIView.swift"; sourceTree = "<group>"; };
-		FF09EE8C24D57AC8005DDAC2 /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSAttributedString.swift; path = ../../../CB_App_Clone/CBOnlineIos/Extensions/NSAttributedString.swift; sourceTree = "<group>"; };
-		FF09EE8D24D57AC8005DDAC2 /* MDCFilledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MDCFilledTextField.swift; path = ../../../CB_App_Clone/CBOnlineIos/Extensions/MDCFilledTextField.swift; sourceTree = "<group>"; };
-		FF09EE8E24D57AC8005DDAC2 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = ../../../CB_App_Clone/CBOnlineIos/Extensions/UIViewController.swift; sourceTree = "<group>"; };
-		FF09EE9324D57AD4005DDAC2 /* OTPVerify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OTPVerify.swift; path = ../../../CB_App_Clone/CBOnlineIos/Presentation/OTPVerify.swift; sourceTree = "<group>"; };
-		FF09EE9424D57AD4005DDAC2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../CB_App_Clone/CBOnlineIos/Presentation/ViewController.swift; sourceTree = "<group>"; };
-		FF09EE9524D57AD4005DDAC2 /* Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Email.swift; path = ../../../CB_App_Clone/CBOnlineIos/Presentation/Email.swift; sourceTree = "<group>"; };
-		FF09EE9624D57AD4005DDAC2 /* onboardingScreen .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "onboardingScreen .swift"; path = "../../../CB_App_Clone/CBOnlineIos/Presentation/onboardingScreen .swift"; sourceTree = "<group>"; };
-		FF09EE9724D57AD4005DDAC2 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = ../../../CB_App_Clone/CBOnlineIos/Presentation/Login.swift; sourceTree = "<group>"; };
-		FF09EE9D24D57AE1005DDAC2 /* BorderCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderCurve.swift; path = ../../../CB_App_Clone/CBOnlineIos/Views/BorderCurve.swift; sourceTree = "<group>"; };
-		FF09EE9E24D57AE1005DDAC2 /* ButtonBorderGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonBorderGradient.swift; path = ../../../CB_App_Clone/CBOnlineIos/Views/ButtonBorderGradient.swift; sourceTree = "<group>"; };
-		FF09EE9F24D57AE1005DDAC2 /* ButtonFillGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonFillGradient.swift; path = ../../../CB_App_Clone/CBOnlineIos/Views/ButtonFillGradient.swift; sourceTree = "<group>"; };
-		FF09EEA024D57AE1005DDAC2 /* CourseCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseCard.swift; path = ../../../CB_App_Clone/CBOnlineIos/Views/CourseCard.swift; sourceTree = "<group>"; };
-		FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Presentation/AppDelegate.swift; sourceTree = "<group>"; };
-		FF9DDB5924D71C0F00694413 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
-		FFF716A9249C61200043EB81 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = CBOnlineIos/Presentation/DashboardViewController.swift; sourceTree = SOURCE_ROOT; };
-		FFF716AB249C66480043EB81 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
-		FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCoursesViewController.swift; path = CBOnlineIos/Presentation/MyCoursesViewController.swift; sourceTree = SOURCE_ROOT; };
-		FFFDA31224C4AAE00087FB6B /* CA_Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CA_Layer.swift; sourceTree = "<group>"; };
+		E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		E5DBADE422A2EA75007A20B5 /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		FF29B7FC24D2EA94006858FE /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		FF29B7FE24D2EAB6006858FE /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		FFF21EBD24D69FD10022C8A6 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> Onboarding Screen added
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,14 +82,8 @@
 		57CACB71249144640013E3AA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FF09EE9724D57AD4005DDAC2 /* Login.swift */,
-				FF09EE9524D57AD4005DDAC2 /* Email.swift */,
-				FF09EE9624D57AD4005DDAC2 /* onboardingScreen .swift */,
-				FF09EE9324D57AD4005DDAC2 /* OTPVerify.swift */,
-				FF09EE9424D57AD4005DDAC2 /* ViewController.swift */,
-				FFF716A9249C61200043EB81 /* DashboardViewController.swift */,
-				FFF716AB249C66480043EB81 /* ExploreViewController.swift */,
-				FFF716FB24A19EAF0043EB81 /* MyCoursesViewController.swift */,
+				E5123ABB22857462005722AC /* ViewController.swift */,
+				57CACB6F2491440D0013E3AA /* onboardingScreen .swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -142,7 +122,7 @@
 				E5DBADE022A2EA22007A20B5 /* Extensions */,
 				57CACB71249144640013E3AA /* Presentation */,
 				57CACB72249144B00013E3AA /* StoryBoards */,
-				FF11F51E24C9A2A1007600F0 /* AppDelegate.swift */,
+				E5123AB922857462005722AC /* AppDelegate.swift */,
 				E5123AC022857464005722AC /* Assets.xcassets */,
 				E5123AC522857464005722AC /* Info.plist */,
 			);
@@ -152,11 +132,7 @@
 		E5DBADE022A2EA22007A20B5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FF09EE8B24D57AC8005DDAC2 /* Extensions+UIView.swift */,
-				FF09EE8D24D57AC8005DDAC2 /* MDCFilledTextField.swift */,
-				FF09EE8C24D57AC8005DDAC2 /* NSAttributedString.swift */,
-				FF09EE8E24D57AC8005DDAC2 /* UIViewController.swift */,
-				FFFDA31224C4AAE00087FB6B /* CA_Layer.swift */,
+				E5DBADE122A2EA4A007A20B5 /* Extensions+UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -164,12 +140,14 @@
 		E5DBADE322A2EA60007A20B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FF09EE9D24D57AE1005DDAC2 /* BorderCurve.swift */,
-				FF09EE9E24D57AE1005DDAC2 /* ButtonBorderGradient.swift */,
-				FF09EE9F24D57AE1005DDAC2 /* ButtonFillGradient.swift */,
-				FF09EEA024D57AE1005DDAC2 /* CourseCard.swift */,
-				FF9DDB5924D71C0F00694413 /* NavigationBarView.swift */,
-				FF022ACB24D153E500816E24 /* ProgressView.swift */,
+				E5DBADE422A2EA75007A20B5 /* CourseCard.swift */,
+				57CACB7324914CB80013E3AA /* ButtonFillGradient.swift */,
+				57CACB7524914CF70013E3AA /* ButtonBorderGradient.swift */,
+<<<<<<< HEAD
+				57A36F2724B64E7E00A1DA56 /* BorderCurve.swift */,
+				FFF21EBD24D69FD10022C8A6 /* NavigationBarView.swift */,
+=======
+>>>>>>> Onboarding Screen added
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,26 +267,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF09EE9C24D57AD4005DDAC2 /* Login.swift in Sources */,
-				FF09EEA124D57AE1005DDAC2 /* BorderCurve.swift in Sources */,
-				FF11F51F24C9A2A2007600F0 /* AppDelegate.swift in Sources */,
-				FF09EE8F24D57AC8005DDAC2 /* Extensions+UIView.swift in Sources */,
-				FF09EEA224D57AE1005DDAC2 /* ButtonBorderGradient.swift in Sources */,
-				FF09EEA424D57AE1005DDAC2 /* CourseCard.swift in Sources */,
-				FF09EE9A24D57AD4005DDAC2 /* Email.swift in Sources */,
-				FF09EE9124D57AC8005DDAC2 /* MDCFilledTextField.swift in Sources */,
-				FF022ACC24D153E500816E24 /* ProgressView.swift in Sources */,
-				FF09EE9024D57AC8005DDAC2 /* NSAttributedString.swift in Sources */,
-				FFFDA31324C4AAE00087FB6B /* CA_Layer.swift in Sources */,
-				FF09EE9824D57AD4005DDAC2 /* OTPVerify.swift in Sources */,
-				FFF716AC249C66480043EB81 /* ExploreViewController.swift in Sources */,
-				FF09EE9924D57AD4005DDAC2 /* ViewController.swift in Sources */,
-				FF9DDB5A24D71C0F00694413 /* NavigationBarView.swift in Sources */,
-				FFF716AA249C61200043EB81 /* DashboardViewController.swift in Sources */,
-				FF09EEA324D57AE1005DDAC2 /* ButtonFillGradient.swift in Sources */,
-				FF09EE9B24D57AD4005DDAC2 /* onboardingScreen .swift in Sources */,
-				FF09EE9224D57AC8005DDAC2 /* UIViewController.swift in Sources */,
-				FFF716FC24A19EAF0043EB81 /* MyCoursesViewController.swift in Sources */,
+				E5123ABC22857462005722AC /* ViewController.swift in Sources */,
+				E5123ABA22857462005722AC /* AppDelegate.swift in Sources */,
+				57CACB7424914CB80013E3AA /* ButtonFillGradient.swift in Sources */,
+				57CACB7624914CF70013E3AA /* ButtonBorderGradient.swift in Sources */,
+<<<<<<< HEAD
+				57A36F2E24B64F8900A1DA56 /* OTPVerify.swift in Sources */,
+				FFF21EBE24D69FD10022C8A6 /* NavigationBarView.swift in Sources */,
+=======
+>>>>>>> Onboarding Screen added
+				57CACB702491440D0013E3AA /* onboardingScreen .swift in Sources */,
+				E5DBADE522A2EA75007A20B5 /* CourseCard.swift in Sources */,
+				E5DBADE222A2EA4A007A20B5 /* Extensions+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -440,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -458,7 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RK3JMA88P6;
 				INFOPLIST_FILE = CBOnlineIos/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,7 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RK3JMA88P6;
 				INFOPLIST_FILE = CBOnlineIos/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

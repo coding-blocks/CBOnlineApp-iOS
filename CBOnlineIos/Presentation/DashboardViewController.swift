@@ -2,7 +2,7 @@
 //  DashboardViewController.swift
 //  CBOnlineIos
 //
-//  Created by Pushpinder Pal Singh on 30/07/20.
+//  Created by Pushpinder Pal Singh on 19/06/20.
 //  Copyright © 2020 Coding Blocks. All rights reserved.
 //
 
@@ -10,22 +10,17 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
-    @IBOutlet weak var navigationView: UIView!
+    @IBOutlet weak var navBarView: UIView!
+    @IBOutlet var performaceViews: [UIView]!
+    @IBOutlet weak var CourseProgress: CustomHorizontalProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationView.layer.cornerRadius = 20
+        navBarView.layer.cornerRadius = 20
+        for views in performaceViews{
+            views.layer.applySketchShadow(color: .gray, alpha: 0.3, x: 0, y: 0, blur: 0, spread: 1)
+        }
+        CourseProgress.progress = 91
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+

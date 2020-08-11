@@ -2,30 +2,45 @@
 //  ExploreViewController.swift
 //  CBOnlineIos
 //
-//  Created by Pushpinder Pal Singh on 30/07/20.
+//  Created by Pushpinder Pal Singh on 19/06/20.
 //  Copyright © 2020 Coding Blocks. All rights reserved.
 //
 
 import UIKit
 
 class ExploreViewController: UIViewController {
-
-    @IBOutlet weak var navigationView: UIView!
+    
+    @IBOutlet weak var navBarView: UIView!
+    @IBOutlet weak var headerButton: UIView!
+    @IBOutlet weak var headerButtonTopic: UILabel!
+    @IBOutlet weak var headerViewCoursesText: UILabel!
+    @IBOutlet weak var headerViewCoursesImage: UIImageView!
+    
+    let gradient = CAGradientLayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationView.layer.cornerRadius = 20
+        setNavBar()
+        setHeaderButton()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setNavBar(){
+        navBarView.layer.cornerRadius = 20
+        navBarView.clipsToBounds = true
+        navBarView.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
     }
-    */
+    func setHeaderButton(){
+        gradient.cornerRadius = 10
+        gradient.frame = headerButton.bounds
+        gradient.colors = [UIColor.rgb(red: 4, green: 103, blue: 246).cgColor, UIColor.rgb(red: 4, green: 16, blue: 176).cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        headerButton.layer.addSublayer(gradient)
+        headerButton.addSubview(headerButtonTopic)
+        headerButton.addSubview(headerViewCoursesText)
+        headerButton.addSubview(headerViewCoursesImage)
+    }
 
+    @IBAction func headerButtonPressed(_ sender: UIButton) {
+         print("Whats up dog?")
+    }
 }
